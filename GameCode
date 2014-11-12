@@ -1,0 +1,3161 @@
+Public Class Form2
+
+    Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub Form2_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        'moving players to form 2
+        Me.Label1.Text = Form1.txtplayer1.Text
+        Me.Label2.Text = Form1.txtplayer2.Text
+        Me.Label3.Text = Form1.txtplayer3.Text
+        Me.Label4.Text = Form1.txtplayer4.Text
+        Me.lblplayer5.Text = Form1.txtplayer5.Text
+        Me.lbltricksp6.Text = Form1.txtplayer6.Text
+        Me.Label7.Text = Form1.txtplayer7.Text
+
+        'hiding scorecards for player 7 if not present
+        If Form1.txtplayer7.Text = "" Then
+            txtplayer7guess1.Hide()
+            txtplayer7guess2.Hide()
+            txtplayer7guess3.Hide()
+            txtplayer7guess4.Hide()
+            txtplayer7guess5.Hide()
+            txtplayer7guess6.Hide()
+            txtplayer7guess7.Hide()
+            txtplayer7guess8.Hide()
+            txtplayer7guess9.Hide()
+            txtplayer7guess10.Hide()
+            txtplayer7guess11.Hide()
+            txtplayer7guess12.Hide()
+            txtplayer7guess13.Hide()
+            txtplayer7guess14.Hide()
+
+            txtplayer7trick1.Hide()
+            txtplayer7trick2.Hide()
+            txtplayer7trick3.Hide()
+            txtplayer7trick4.Hide()
+            txtplayer7trick5.Hide()
+            txtplayer7trick6.Hide()
+            txtplayer7trick7.Hide()
+            txtplayer7trick8.Hide()
+            txtplayer7trick9.Hide()
+            txtplayer7trick10.Hide()
+            txtplayer7trick11.Hide()
+            txtplayer7trick12.Hide()
+            txtplayer7trick13.Hide()
+            txtplayer7trick14.Hide()
+
+            
+            lblp7number1.Hide()
+            lblp7number2.Hide()
+            lblp7number3.Hide()
+            lblp7number4.Hide()
+            lblp7number5.Hide()
+            lblp7number6.Hide()
+            lblp7number7.Hide()
+            lblp7number8.Hide()
+            lblp7number9.Hide()
+            lblp7number10.Hide()
+            lblp7number11.Hide()
+            lblp7number12.Hide()
+            lblp7number13.Hide()
+            lblp7number14.Hide()
+
+            lblguessedp7.Hide()
+            lbltricksp7.Hide()
+            lblp7score.Hide()
+            txtp7score.Hide()
+
+
+        End If
+        'hiding scorecards for player 6 if not present
+        If Form1.txtplayer6.Text = "" Then
+            txtplayer6guess1.Hide()
+            txtplayer6guess2.Hide()
+            txtplayer6guess3.Hide()
+            txtplayer6guess4.Hide()
+            txtplayer6guess5.Hide()
+            txtplayer6guess6.Hide()
+            txtplayer6guess7.Hide()
+            txtplayer6guess8.Hide()
+            txtplayer6guess9.Hide()
+            txtplayer6guess10.Hide()
+            txtplayer6guess11.Hide()
+            txtplayer6guess12.Hide()
+            txtplayer6guess13.Hide()
+            txtplayer6guess14.Hide()
+
+            txtplayer6trick1.Hide()
+            txtplayer6trick2.Hide()
+            txtplayer6trick3.Hide()
+            txtplayer6trick4.Hide()
+            txtplayer6trick5.Hide()
+            txtplayer6trick6.Hide()
+            txtplayer6trick7.Hide()
+            txtplayer6trick8.Hide()
+            txtplayer6trick9.Hide()
+            txtplayer6trick10.Hide()
+            txtplayer6trick11.Hide()
+            txtplayer6trick12.Hide()
+            txtplayer6trick13.Hide()
+            txtplayer6trick14.Hide()
+
+            lblp6number1.Hide()
+            lblp6number2.Hide()
+            lblp6number3.Hide()
+            lblp6number4.Hide()
+            lblp6number5.Hide()
+            lblp6number6.Hide()
+            lblp6number7.Hide()
+            lblp6number8.Hide()
+            lblp6number9.Hide()
+            lblp6number10.Hide()
+            lblp6number11.Hide()
+            lblp6number12.Hide()
+            lblp6number13.Hide()
+            lblp6number14.Hide()
+
+            lblguessedp6.Hide()
+            lbltricks6.Hide()
+            lblp6score.Hide()
+            txtp6score.Hide()
+
+        End If
+
+        'hiding scorecards for player 5 if not present
+        If Form1.txtplayer5.Text = "" Then
+            txtplayer5guess1.Hide()
+            txtplayer5guess2.Hide()
+            txtplayer5guess3.Hide()
+            txtplayer5guess4.Hide()
+            txtplayer5guess5.Hide()
+            txtplayer5guess6.Hide()
+            txtplayer5guess7.Hide()
+            txtplayer5guess8.Hide()
+            txtplayer5guess9.Hide()
+            txtplayer5guess10.Hide()
+            txtplayer5guess11.Hide()
+            txtplayer5guess12.Hide()
+            txtplayer5guess13.Hide()
+            txtplayer5guess14.Hide()
+
+            txtplayer5trick1.Hide()
+            txtplayer5trick2.Hide()
+            txtplayer5trick3.Hide()
+            txtplayer5trick4.Hide()
+            txtplayer5trick5.Hide()
+            txtplayer5trick6.Hide()
+            txtplayer5trick7.Hide()
+            txtplayer5trick8.Hide()
+            txtplayer5trick9.Hide()
+            txtplayer5trick10.Hide()
+            txtplayer5trick11.Hide()
+            txtplayer5trick12.Hide()
+            txtplayer5trick13.Hide()
+            txtplayer5trick14.Hide()
+
+            lblp5number1.Hide()
+            lblp5number2.Hide()
+            lblp5number3.Hide()
+            lblp5number4.Hide()
+            lblp5number5.Hide()
+            lblp5number6.Hide()
+            lblp5number7.Hide()
+            lblp5number8.Hide()
+            lblp5number9.Hide()
+            lblp5number10.Hide()
+            lblp5number11.Hide()
+            lblp5number12.Hide()
+            lblp5number13.Hide()
+            lblp5number14.Hide()
+
+            lblguessedp5.Hide()
+            lbltricksp5.Hide()
+            lblp5score.Hide()
+            txtp5score.Hide()
+        End If
+
+        'hiding scorecards for player 4 if not present
+        If Form1.txtplayer4.Text = "" Then
+            txtplayer4guess1.Hide()
+            txtplayer4guess2.Hide()
+            txtplayer4guess3.Hide()
+            txtplayer4guess4.Hide()
+            txtplayer4guess5.Hide()
+            txtplayer4guess6.Hide()
+            txtplayer4guess7.Hide()
+            txtplayer4guess8.Hide()
+            txtplayer4guess9.Hide()
+            txtplayer4guess10.Hide()
+            txtplayer4guess11.Hide()
+            txtplayer4guess12.Hide()
+            txtplayer4guess13.Hide()
+            txtplayer4guess14.Hide()
+
+            txtplayer4trick1.Hide()
+            txtplayer4trick2.Hide()
+            txtplayer4trick3.Hide()
+            txtplayer4trick4.Hide()
+            txtplayer4trick5.Hide()
+            txtplayer4trick6.Hide()
+            txtplayer4trick7.Hide()
+            txtplayer4trick8.Hide()
+            txtplayer4trick9.Hide()
+            txtplayer4trick10.Hide()
+            txtplayer4trick11.Hide()
+            txtplayer4trick12.Hide()
+            txtplayer4trick13.Hide()
+            txtplayer4trick14.Hide()
+
+            lblp4number1.Hide()
+            lblp4number2.Hide()
+            lblp4number3.Hide()
+            lblp4number4.Hide()
+            lblp4number5.Hide()
+            lblp4number6.Hide()
+            lblp4number7.Hide()
+            lblp4number8.Hide()
+            lblp4number9.Hide()
+            lblp4number10.Hide()
+            lblp4number11.Hide()
+            lblp4number12.Hide()
+            lblp4number13.Hide()
+            lblp4number14.Hide()
+
+            lblguessedp4.Hide()
+            lbltricksp4.Hide()
+            lblp4score.Hide()
+            txtp4score.Hide()
+        End If
+
+        'hiding scorecards for player 3 if not present
+        If Form1.txtplayer3.Text = "" Then
+            txtplayer3guess1.Hide()
+            txtplayer3guess2.Hide()
+            txtplayer3guess3.Hide()
+            txtplayer3guess4.Hide()
+            txtplayer3guess5.Hide()
+            txtplayer3guess6.Hide()
+            txtplayer3guess7.Hide()
+            txtplayer3guess8.Hide()
+            txtplayer3guess9.Hide()
+            txtplayer3guess10.Hide()
+            txtplayer3guess11.Hide()
+            txtplayer3guess12.Hide()
+            txtplayer3guess13.Hide()
+            txtplayer3guess14.Hide()
+
+
+            txtplayer3trick1.Hide()
+            txtplayer3trick2.Hide()
+            txtplayer3trick3.Hide()
+            txtplayer3trick4.Hide()
+            txtplayer3trick5.Hide()
+            txtplayer3trick6.Hide()
+            txtplayer3trick7.Hide()
+            txtplayer3trick8.Hide()
+            txtplayer3trick9.Hide()
+            txtplayer3trick10.Hide()
+            txtplayer3trick11.Hide()
+            txtplayer3trick12.Hide()
+            txtplayer3trick13.Hide()
+            txtplayer3trick14.Hide()
+
+            lblp3number1.Hide()
+            lblp3number2.Hide()
+            lblp3number3.Hide()
+            lblp3number4.Hide()
+            lblp3number5.Hide()
+            lblp3number6.Hide()
+            lblp3number7.Hide()
+            lblp3number8.Hide()
+            lblp3number9.Hide()
+            lblp3number10.Hide()
+            lblp3number11.Hide()
+            lblp3number12.Hide()
+            lblp3number13.Hide()
+            lblp3number14.Hide()
+
+            lblguessedp3.Hide()
+            lbltricksp3.Hide()
+            lblp3score.Hide()
+            txtp3score.Hide()
+
+        End If
+
+
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtplayer1guess1.TextChanged
+
+    End Sub
+
+    Private Sub TextBox5_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtp7score.TextChanged
+
+    End Sub
+
+    Private Sub btncalculate_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btncalculate.Click
+        Dim p1g1 As String = txtplayer1guess1.Text
+        Dim p1g2 As String = txtplayer1guess2.Text
+        Dim p1g3 As String = txtplayer1guess3.Text
+        Dim p1g4 As String = txtplayer1guess4.Text
+        Dim p1g5 As String = txtplayer1guess5.Text
+        Dim p1g6 As String = txtplayer1guess6.Text
+        Dim p1g7 As String = txtplayer1guess7.Text
+        Dim p1g8 As String = txtplayer1guess8.Text
+        Dim p1g9 As String = txtplayer1guess9.Text
+        Dim p1g10 As String = txtplayer1guess10.Text
+        Dim p1g11 As String = txtplayer1guess11.Text
+        Dim p1g12 As String = txtplayer1guess12.Text
+        Dim p1g13 As String = txtplayer1guess13.Text
+        Dim p1g14 As String = txtplayer1guess14.Text
+
+        Dim p2g1 As String = txtplayer2guess1.Text
+        Dim p2g2 As String = txtplayer2guess2.Text
+        Dim p2g3 As String = txtplayer2guess3.Text
+        Dim p2g4 As String = txtplayer2guess4.Text
+        Dim p2g5 As String = txtplayer2guess5.Text
+        Dim p2g6 As String = txtplayer2guess6.Text
+        Dim p2g7 As String = txtplayer2guess7.Text
+        Dim p2g8 As String = txtplayer2guess8.Text
+        Dim p2g9 As String = txtplayer2guess9.Text
+        Dim p2g10 As String = txtplayer2guess10.Text
+        Dim p2g11 As String = txtplayer2guess11.Text
+        Dim p2g12 As String = txtplayer2guess12.Text
+        Dim p2g13 As String = txtplayer2guess13.Text
+        Dim p2g14 As String = txtplayer2guess14.Text
+
+        Dim p3g1 As String = txtplayer3guess1.Text
+        Dim p3g2 As String = txtplayer3guess2.Text
+        Dim p3g3 As String = txtplayer3guess3.Text
+        Dim p3g4 As String = txtplayer3guess4.Text
+        Dim p3g5 As String = txtplayer3guess5.Text
+        Dim p3g6 As String = txtplayer3guess6.Text
+        Dim p3g7 As String = txtplayer3guess7.Text
+        Dim p3g8 As String = txtplayer3guess8.Text
+        Dim p3g9 As String = txtplayer3guess9.Text
+        Dim p3g10 As String = txtplayer3guess10.Text
+        Dim p3g11 As String = txtplayer3guess11.Text
+        Dim p3g12 As String = txtplayer3guess12.Text
+        Dim p3g13 As String = txtplayer3guess13.Text
+        Dim p3g14 As String = txtplayer3guess14.Text
+
+        Dim p4g1 As String = txtplayer4guess1.Text
+        Dim p4g2 As String = txtplayer4guess2.Text
+        Dim p4g3 As String = txtplayer4guess3.Text
+        Dim p4g4 As String = txtplayer4guess4.Text
+        Dim p4g5 As String = txtplayer4guess5.Text
+        Dim p4g6 As String = txtplayer4guess6.Text
+        Dim p4g7 As String = txtplayer4guess7.Text
+        Dim p4g8 As String = txtplayer4guess8.Text
+        Dim p4g9 As String = txtplayer4guess9.Text
+        Dim p4g10 As String = txtplayer4guess10.Text
+        Dim p4g11 As String = txtplayer4guess11.Text
+        Dim p4g12 As String = txtplayer4guess12.Text
+        Dim p4g13 As String = txtplayer4guess13.Text
+        Dim p4g14 As String = txtplayer4guess14.Text
+
+        Dim p5g1 As String = txtplayer5guess1.Text
+        Dim p5g2 As String = txtplayer5guess2.Text
+        Dim p5g3 As String = txtplayer5guess3.Text
+        Dim p5g4 As String = txtplayer5guess4.Text
+        Dim p5g5 As String = txtplayer5guess5.Text
+        Dim p5g6 As String = txtplayer5guess6.Text
+        Dim p5g7 As String = txtplayer5guess7.Text
+        Dim p5g8 As String = txtplayer5guess8.Text
+        Dim p5g9 As String = txtplayer5guess9.Text
+        Dim p5g10 As String = txtplayer5guess10.Text
+        Dim p5g11 As String = txtplayer5guess11.Text
+        Dim p5g12 As String = txtplayer5guess12.Text
+        Dim p5g13 As String = txtplayer5guess13.Text
+        Dim p5g14 As String = txtplayer5guess14.Text
+
+        Dim p6g1 As String = txtplayer6guess1.Text
+        Dim p6g2 As String = txtplayer6guess2.Text
+        Dim p6g3 As String = txtplayer6guess3.Text
+        Dim p6g4 As String = txtplayer6guess4.Text
+        Dim p6g5 As String = txtplayer6guess5.Text
+        Dim p6g6 As String = txtplayer6guess6.Text
+        Dim p6g7 As String = txtplayer6guess7.Text
+        Dim p6g8 As String = txtplayer6guess8.Text
+        Dim p6g9 As String = txtplayer6guess9.Text
+        Dim p6g10 As String = txtplayer6guess10.Text
+        Dim p6g11 As String = txtplayer6guess11.Text
+        Dim p6g12 As String = txtplayer6guess12.Text
+        Dim p6g13 As String = txtplayer6guess13.Text
+        Dim p6g14 As String = txtplayer6guess14.Text
+
+        Dim p7g1 As String = txtplayer7guess1.Text
+        Dim p7g2 As String = txtplayer7guess2.Text
+        Dim p7g3 As String = txtplayer7guess3.Text
+        Dim p7g4 As String = txtplayer7guess4.Text
+        Dim p7g5 As String = txtplayer7guess5.Text
+        Dim p7g6 As String = txtplayer7guess6.Text
+        Dim p7g7 As String = txtplayer7guess7.Text
+        Dim p7g8 As String = txtplayer7guess8.Text
+        Dim p7g9 As String = txtplayer7guess9.Text
+        Dim p7g10 As String = txtplayer7guess10.Text
+        Dim p7g11 As String = txtplayer7guess11.Text
+        Dim p7g12 As String = txtplayer7guess12.Text
+        Dim p7g13 As String = txtplayer7guess13.Text
+        Dim p7g14 As String = txtplayer7guess14.Text
+        'player 1 guess 1 score
+       
+        If txtplayer1guess1.Text = "" Or txtplayer1trick1.Text = "" Then
+            lblp1s1.Text = ""
+        ElseIf txtplayer1guess1.Text = 0 And txtplayer1trick1.Text = 0 Then
+
+            lblp1s1.Text = 10
+
+        ElseIf txtplayer1guess1.Text = p1g1 And txtplayer1trick1.Text = p1g1 Then
+
+            lblp1s1.Text = p1g1 * 11
+        ElseIf txtplayer1guess1.Text <> txtplayer1trick1.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p1g1 - txtplayer1trick1.Text)
+            lblp1s1.Text = y * -10
+
+        End If
+
+        'player 1 guess 2 score
+
+
+        If txtplayer1guess2.Text = "" Or txtplayer1trick2.Text = "" Then
+            lblp1s2.Text = ""
+        ElseIf txtplayer1guess2.Text = 0 And txtplayer1trick2.Text = 0 Then
+
+            lblp1s2.Text = 10
+
+        ElseIf txtplayer1guess2.Text = p1g2 And txtplayer1trick2.Text = p1g2 Then
+
+            lblp1s2.Text = p1g2 * 11
+        ElseIf txtplayer1guess2.Text <> txtplayer1trick2.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p1g2 - txtplayer1trick2.Text)
+            lblp1s2.Text = y * -10
+
+        End If
+
+        'player 1 guess 3 score
+
+        If txtplayer1guess3.Text = "" Or txtplayer1trick3.Text = "" Then
+            lblp1s3.Text = ""
+        ElseIf txtplayer1guess3.Text = 0 And txtplayer1trick3.Text = 0 Then
+
+            lblp1s3.Text = 10
+
+        ElseIf txtplayer1guess3.Text = p1g3 And txtplayer1trick3.Text = p1g3 Then
+
+            lblp1s3.Text = p1g3 * 11
+        ElseIf txtplayer1guess3.Text <> txtplayer1trick3.Text Then
+            Dim y As Integer
+            y = Math.Abs(p1g3 - txtplayer1trick3.Text)
+            lblp1s3.Text = y * -10
+
+
+        End If
+        'player 1 guess 4 score
+
+        If txtplayer1guess4.Text = "" Or txtplayer1trick4.Text = "" Then
+            lblp1s4.Text = ""
+        ElseIf txtplayer1guess4.Text = 0 And txtplayer1trick4.Text = 0 Then
+
+            lblp1s4.Text = 10
+
+        ElseIf txtplayer1guess4.Text = txtplayer1trick4.Text Then
+
+            lblp1s4.Text = p1g4 * 11
+
+        ElseIf txtplayer1guess4.Text <> txtplayer1trick4.Text Then
+            Dim y As Integer
+            y = Math.Abs(p1g4 - txtplayer1trick4.Text)
+            lblp1s4.Text = y * -10
+
+
+        End If
+        'player 1 guess 5 score
+        If txtplayer1guess5.Text = "" Or txtplayer1trick5.Text = "" Then
+            lblp1s5.Text = ""
+        ElseIf txtplayer1guess5.Text = 0 And txtplayer1trick5.Text = 0 Then
+
+            lblp1s5.Text = 10
+
+        ElseIf txtplayer1guess5.Text = p1g5 And txtplayer1trick5.Text = p1g5 Then
+
+            lblp1s5.Text = p1g5 * 11
+        ElseIf txtplayer1guess5.Text <> txtplayer1trick5.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p1g5 - txtplayer1trick5.Text)
+            lblp1s5.Text = y * -10
+
+        End If
+
+        'player 1 guess 6 score
+
+
+        If txtplayer1guess6.Text = "" Or txtplayer1trick6.Text = "" Then
+            lblp1s6.Text = ""
+        ElseIf txtplayer1guess6.Text = 0 And txtplayer1trick6.Text = 0 Then
+
+            lblp1s6.Text = 10
+
+        ElseIf txtplayer1guess6.Text = p1g6 And txtplayer1trick6.Text = p1g6 Then
+
+            lblp1s6.Text = p1g6 * 11
+        ElseIf txtplayer1guess6.Text <> txtplayer1trick6.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p1g6 - txtplayer1trick6.Text)
+            lblp1s6.Text = y * -10
+
+        End If
+
+        'player 1 guess 7 score
+
+        If txtplayer1guess7.Text = "" Or txtplayer1trick7.Text = "" Then
+            lblp1s7.Text = ""
+        ElseIf txtplayer1guess7.Text = 0 And txtplayer1trick7.Text = 0 Then
+
+            lblp1s7.Text = 10
+
+        ElseIf txtplayer1guess7.Text = p1g7 And txtplayer1trick7.Text = p1g7 Then
+
+            lblp1s7.Text = p1g7 * 11
+        ElseIf txtplayer1guess7.Text <> txtplayer1trick7.Text Then
+            Dim y As Integer
+            y = Math.Abs(p1g7 - txtplayer1trick7.Text)
+            lblp1s7.Text = y * -10
+
+
+        End If
+        'player 1 guess 8 score
+
+        If txtplayer1guess8.Text = "" Or txtplayer1trick8.Text = "" Then
+            lblp1s8.Text = ""
+        ElseIf txtplayer1guess8.Text = 0 And txtplayer1trick8.Text = 0 Then
+
+            lblp1s8.Text = 10
+
+        ElseIf txtplayer1guess8.Text = txtplayer1trick8.Text Then
+
+            lblp1s8.Text = p1g8 * 11
+
+        ElseIf txtplayer1guess8.Text <> txtplayer1trick8.Text Then
+            Dim y As Integer
+            y = Math.Abs(p1g8 - txtplayer1trick8.Text)
+            lblp1s8.Text = y * -10
+        End If
+
+        'player 1 guess 9 score
+
+
+        If txtplayer1guess9.Text = "" Or txtplayer1trick9.Text = "" Then
+            lblp1s9.Text = ""
+        ElseIf txtplayer1guess9.Text = 0 And txtplayer1trick9.Text = 0 Then
+
+            lblp1s9.Text = 10
+
+        ElseIf txtplayer1guess9.Text = txtplayer1trick9.Text Then
+
+            lblp1s9.Text = p1g9 * 11
+
+        ElseIf txtplayer1guess9.Text <> txtplayer1trick9.Text Then
+            Dim y As Integer
+            y = Math.Abs(p1g9 - txtplayer1trick9.Text)
+            lblp1s9.Text = y * -10
+
+        End If
+
+
+        'player 1 guess 10
+        If txtplayer1guess10.Text = "" Or txtplayer1trick10.Text = "" Then
+            lblp1s10.Text = ""
+        ElseIf txtplayer1guess10.Text = 0 And txtplayer1trick10.Text = 0 Then
+
+            lblp1s10.Text = 10
+
+        ElseIf txtplayer1guess10.Text = p1g10 And txtplayer1trick10.Text = p1g10 Then
+
+            lblp1s10.Text = p1g10 * 11
+        ElseIf txtplayer1guess10.Text <> txtplayer1trick10.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p1g10 - txtplayer1trick10.Text)
+            lblp1s10.Text = x * -10
+
+        End If
+        'player 1 guess 11 score
+
+
+        If txtplayer1guess11.Text = "" Or txtplayer1trick11.Text = "" Then
+            lblp1s11.Text = ""
+        ElseIf txtplayer1guess11.Text = 0 And txtplayer1trick11.Text = 0 Then
+
+            lblp1s11.Text = 10
+
+        ElseIf txtplayer1guess11.Text = p1g11 And txtplayer1trick11.Text = p1g11 Then
+
+            lblp1s11.Text = p1g11 * 11
+        ElseIf txtplayer1guess11.Text <> txtplayer1trick11.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p1g11 - txtplayer1trick11.Text)
+            lblp1s11.Text = x * -10
+
+        End If
+
+        'player 1 guess 12 score
+
+        If txtplayer1guess12.Text = "" Or txtplayer1trick12.Text = "" Then
+            lblp1s12.Text = ""
+        ElseIf txtplayer1guess12.Text = 0 And txtplayer1trick12.Text = 0 Then
+
+            lblp1s12.Text = 10
+
+        ElseIf txtplayer1guess12.Text = p1g12 And txtplayer1trick12.Text = p1g12 Then
+
+            lblp1s12.Text = p1g12 * 11
+        ElseIf txtplayer1guess12.Text <> txtplayer1trick12.Text Then
+            Dim x As Integer
+            x = Math.Abs(p1g12 - txtplayer1trick12.Text)
+            lblp1s12.Text = x * -10
+
+
+        End If
+        'player 1 guess 13 score
+
+        If txtplayer1guess13.Text = "" Or txtplayer1trick13.Text = "" Then
+            lblp1s13.Text = ""
+        ElseIf txtplayer1guess13.Text = 0 And txtplayer1trick13.Text = 0 Then
+
+            lblp1s13.Text = 10
+
+        ElseIf txtplayer1guess13.Text = txtplayer1trick13.Text Then
+
+            lblp1s13.Text = p1g13 * 11
+
+        ElseIf txtplayer1guess13.Text <> txtplayer1trick13.Text Then
+            Dim x As Integer
+            x = Math.Abs(p1g13 - txtplayer1trick13.Text)
+            lblp1s13.Text = x * -10
+
+
+        End If
+        'player 1 guess 14 score
+        If txtplayer1guess14.Text = "" Or txtplayer1trick14.Text = "" Then
+            lblp1s14.Text = ""
+        ElseIf txtplayer1guess14.Text = 0 And txtplayer1trick14.Text = 0 Then
+
+            lblp1s14.Text = 10
+
+        ElseIf txtplayer1guess14.Text = p1g14 And txtplayer1trick14.Text = p1g14 Then
+
+            lblp1s14.Text = p1g14 * 11
+        ElseIf txtplayer1guess14.Text <> txtplayer1trick14.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p1g14 - txtplayer1trick14.Text)
+            lblp1s14.Text = x * -10
+
+        End If
+        'PLAYER 2
+
+        'Player 2 guess 1 score
+
+        If txtplayer2guess1.Text = "" Or txtplayer2trick1.Text = "" Then
+            lblp2s1.Text = ""
+        ElseIf txtplayer2guess1.Text = 0 And txtplayer2trick1.Text = 0 Then
+
+            lblp2s1.Text = 10
+
+        ElseIf txtplayer2guess1.Text = p2g1 And txtplayer2trick1.Text = p2g1 Then
+
+            lblp2s1.Text = p2g1 * 11
+        ElseIf txtplayer2guess1.Text <> txtplayer2trick1.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p2g1 - txtplayer2trick1.Text)
+            lblp2s1.Text = y * -10
+
+        End If
+
+        'Player 2 guess 2 score
+
+
+        If txtplayer2guess2.Text = "" Or txtplayer2trick2.Text = "" Then
+            lblp2s2.Text = ""
+        ElseIf txtplayer2guess2.Text = 0 And txtplayer2trick2.Text = 0 Then
+
+            lblp2s2.Text = 10
+
+        ElseIf txtplayer2guess2.Text = p2g2 And txtplayer2trick2.Text = p2g2 Then
+
+            lblp2s2.Text = p2g2 * 11
+        ElseIf txtplayer2guess2.Text <> txtplayer2trick2.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p2g2 - txtplayer2trick2.Text)
+            lblp2s2.Text = y * -10
+
+        End If
+
+        'Player 2 guess 3 score
+
+        If txtplayer2guess3.Text = "" Or txtplayer2trick3.Text = "" Then
+            lblp2s3.Text = ""
+        ElseIf txtplayer2guess3.Text = 0 And txtplayer2trick3.Text = 0 Then
+
+            lblp2s3.Text = 10
+
+        ElseIf txtplayer2guess3.Text = p2g3 And txtplayer2trick3.Text = p2g3 Then
+
+            lblp2s3.Text = p2g3 * 11
+        ElseIf txtplayer2guess3.Text <> txtplayer2trick3.Text Then
+            Dim y As Integer
+            y = Math.Abs(p2g3 - txtplayer2trick3.Text)
+            lblp2s3.Text = y * -10
+
+
+        End If
+        'Player 2 guess 4 score
+
+        If txtplayer2guess4.Text = "" Or txtplayer2trick4.Text = "" Then
+            lblp2s4.Text = ""
+        ElseIf txtplayer2guess4.Text = 0 And txtplayer2trick4.Text = 0 Then
+
+            lblp2s4.Text = 10
+
+        ElseIf txtplayer2guess4.Text = txtplayer2trick4.Text Then
+
+            lblp2s4.Text = p2g4 * 11
+
+        ElseIf txtplayer2guess4.Text <> txtplayer2trick4.Text Then
+            Dim y As Integer
+            y = Math.Abs(p2g4 - txtplayer2trick4.Text)
+            lblp2s4.Text = y * -10
+
+
+        End If
+        'Player 2 guess 5 score
+        If txtplayer2guess5.Text = "" Or txtplayer2trick5.Text = "" Then
+            lblp2s5.Text = ""
+        ElseIf txtplayer2guess5.Text = 0 And txtplayer2trick5.Text = 0 Then
+
+            lblp2s5.Text = 10
+
+        ElseIf txtplayer2guess5.Text = p2g5 And txtplayer2trick5.Text = p2g5 Then
+
+            lblp2s5.Text = p2g5 * 11
+        ElseIf txtplayer2guess5.Text <> txtplayer2trick5.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p2g5 - txtplayer2trick5.Text)
+            lblp2s5.Text = y * -10
+
+        End If
+
+        'Player 2 guess 6 score
+
+
+        If txtplayer2guess6.Text = "" Or txtplayer2trick6.Text = "" Then
+            lblp2s6.Text = ""
+        ElseIf txtplayer2guess6.Text = 0 And txtplayer2trick6.Text = 0 Then
+
+            lblp2s6.Text = 10
+
+        ElseIf txtplayer2guess6.Text = p2g6 And txtplayer2trick6.Text = p2g6 Then
+
+            lblp2s6.Text = p2g6 * 11
+        ElseIf txtplayer2guess6.Text <> txtplayer2trick6.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p2g6 - txtplayer2trick6.Text)
+            lblp2s6.Text = y * -10
+
+        End If
+
+        'Player 2 guess 7 score
+
+        If txtplayer2guess7.Text = "" Or txtplayer2trick7.Text = "" Then
+            lblp2s7.Text = ""
+        ElseIf txtplayer2guess7.Text = 0 And txtplayer2trick7.Text = 0 Then
+
+            lblp2s7.Text = 10
+
+        ElseIf txtplayer2guess7.Text = p2g7 And txtplayer2trick7.Text = p2g7 Then
+
+            lblp2s7.Text = p2g7 * 11
+        ElseIf txtplayer2guess7.Text <> txtplayer2trick7.Text Then
+            Dim y As Integer
+            y = Math.Abs(p2g7 - txtplayer2trick7.Text)
+            lblp2s7.Text = y * -10
+
+
+        End If
+        'Player 2 guess 8 score
+
+        If txtplayer2guess8.Text = "" Or txtplayer2trick8.Text = "" Then
+            lblp2s8.Text = ""
+        ElseIf txtplayer2guess8.Text = 0 And txtplayer2trick8.Text = 0 Then
+
+            lblp2s8.Text = 10
+
+        ElseIf txtplayer2guess8.Text = txtplayer2trick8.Text Then
+
+            lblp2s8.Text = p2g8 * 11
+
+        ElseIf txtplayer2guess8.Text <> txtplayer2trick8.Text Then
+            Dim y As Integer
+            y = Math.Abs(p2g8 - txtplayer2trick8.Text)
+            lblp2s8.Text = y * -10
+        End If
+
+        'Player 2 guess 9 score
+
+
+        If txtplayer2guess9.Text = "" Or txtplayer2trick9.Text = "" Then
+            lblp2s9.Text = ""
+        ElseIf txtplayer2guess9.Text = 0 And txtplayer2trick9.Text = 0 Then
+
+            lblp2s9.Text = 10
+
+        ElseIf txtplayer2guess9.Text = txtplayer2trick9.Text Then
+
+            lblp2s9.Text = p2g9 * 11
+
+        ElseIf txtplayer2guess9.Text <> txtplayer2trick9.Text Then
+            Dim y As Integer
+            y = Math.Abs(p2g9 - txtplayer2trick9.Text)
+            lblp2s9.Text = y * -10
+
+        End If
+
+
+        'Player 2 guess 10
+        If txtplayer2guess10.Text = "" Or txtplayer2trick10.Text = "" Then
+            lblp2s10.Text = ""
+        ElseIf txtplayer2guess10.Text = 0 And txtplayer2trick10.Text = 0 Then
+
+            lblp2s10.Text = 10
+
+        ElseIf txtplayer2guess10.Text = p2g10 And txtplayer2trick10.Text = p2g10 Then
+
+            lblp2s10.Text = p2g10 * 11
+        ElseIf txtplayer2guess10.Text <> txtplayer2trick10.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p2g10 - txtplayer2trick10.Text)
+            lblp2s10.Text = x * -10
+
+        End If
+        'Player 2 guess 11 score
+
+
+        If txtplayer2guess11.Text = "" Or txtplayer2trick11.Text = "" Then
+            lblp2s11.Text = ""
+        ElseIf txtplayer2guess11.Text = 0 And txtplayer2trick11.Text = 0 Then
+
+            lblp2s11.Text = 10
+
+        ElseIf txtplayer2guess11.Text = p2g11 And txtplayer2trick11.Text = p2g11 Then
+
+            lblp2s11.Text = p2g11 * 11
+        ElseIf txtplayer2guess11.Text <> txtplayer2trick11.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p2g11 - txtplayer2trick11.Text)
+            lblp2s11.Text = x * -10
+
+        End If
+
+        'Player 2 guess 12 score
+
+        If txtplayer2guess12.Text = "" Or txtplayer2trick12.Text = "" Then
+            lblp2s12.Text = ""
+        ElseIf txtplayer2guess12.Text = 0 And txtplayer2trick12.Text = 0 Then
+
+            lblp2s12.Text = 10
+
+        ElseIf txtplayer2guess12.Text = p2g12 And txtplayer2trick12.Text = p2g12 Then
+
+            lblp2s12.Text = p2g12 * 11
+        ElseIf txtplayer2guess12.Text <> txtplayer2trick12.Text Then
+            Dim x As Integer
+            x = Math.Abs(p2g12 - txtplayer2trick12.Text)
+            lblp2s12.Text = x * -10
+
+
+        End If
+        'Player 2 guess 13 score
+
+        If txtplayer2guess13.Text = "" Or txtplayer2trick13.Text = "" Then
+            lblp2s13.Text = ""
+        ElseIf txtplayer2guess13.Text = 0 And txtplayer2trick13.Text = 0 Then
+
+            lblp2s13.Text = 10
+
+        ElseIf txtplayer2guess13.Text = txtplayer2trick13.Text Then
+
+            lblp2s13.Text = p2g13 * 11
+
+        ElseIf txtplayer2guess13.Text <> txtplayer2trick13.Text Then
+            Dim x As Integer
+            x = Math.Abs(p2g13 - txtplayer2trick13.Text)
+            lblp2s13.Text = x * -10
+
+
+        End If
+        'Player 2 guess 14 score
+        If txtplayer2guess14.Text = "" Or txtplayer2trick14.Text = "" Then
+            lblp2s14.Text = ""
+        ElseIf txtplayer2guess14.Text = 0 And txtplayer2trick14.Text = 0 Then
+
+            lblp2s14.Text = 10
+
+        ElseIf txtplayer2guess14.Text = p2g14 And txtplayer2trick14.Text = p2g14 Then
+
+            lblp2s14.Text = p2g14 * 11
+        ElseIf txtplayer2guess14.Text <> txtplayer2trick14.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p2g14 - txtplayer2trick14.Text)
+            lblp2s14.Text = x * -10
+
+        End If
+        'Player 3
+
+        If txtplayer3guess1.Text = "" Or txtplayer3trick1.Text = "" Then
+            lblp3s1.Text = ""
+        ElseIf txtplayer3guess1.Text = 0 And txtplayer3trick1.Text = 0 Then
+
+            lblp3s1.Text = 10
+
+        ElseIf txtplayer3guess1.Text = p3g1 And txtplayer3trick1.Text = p3g1 Then
+
+            lblp3s1.Text = p3g1 * 11
+        ElseIf txtplayer3guess1.Text <> txtplayer3trick1.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p3g1 - txtplayer3trick1.Text)
+            lblp3s1.Text = y * -10
+
+        End If
+
+        'Player 3 guess 2 score
+
+
+        If txtplayer3guess2.Text = "" Or txtplayer3trick2.Text = "" Then
+            lblp3s2.Text = ""
+        ElseIf txtplayer3guess2.Text = 0 And txtplayer3trick2.Text = 0 Then
+
+            lblp3s2.Text = 10
+
+        ElseIf txtplayer3guess2.Text = p3g2 And txtplayer3trick2.Text = p3g2 Then
+
+            lblp3s2.Text = p3g2 * 11
+        ElseIf txtplayer3guess2.Text <> txtplayer3trick2.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p3g2 - txtplayer3trick2.Text)
+            lblp3s2.Text = y * -10
+
+        End If
+
+        'Player 3 guess 3 score
+
+        If txtplayer3guess3.Text = "" Or txtplayer3trick3.Text = "" Then
+            lblp3s3.Text = ""
+        ElseIf txtplayer3guess3.Text = 0 And txtplayer3trick3.Text = 0 Then
+
+            lblp3s3.Text = 10
+
+        ElseIf txtplayer3guess3.Text = p3g3 And txtplayer3trick3.Text = p3g3 Then
+
+            lblp3s3.Text = p3g3 * 11
+        ElseIf txtplayer3guess3.Text <> txtplayer3trick3.Text Then
+            Dim y As Integer
+            y = Math.Abs(p3g3 - txtplayer3trick3.Text)
+            lblp3s3.Text = y * -10
+
+
+        End If
+        'Player 3 guess 4 score
+
+        If txtplayer3guess4.Text = "" Or txtplayer3trick4.Text = "" Then
+            lblp3s4.Text = ""
+        ElseIf txtplayer3guess4.Text = 0 And txtplayer3trick4.Text = 0 Then
+
+            lblp3s4.Text = 10
+
+        ElseIf txtplayer3guess4.Text = txtplayer3trick4.Text Then
+
+            lblp3s4.Text = p3g4 * 11
+
+        ElseIf txtplayer3guess4.Text <> txtplayer3trick4.Text Then
+            Dim y As Integer
+            y = Math.Abs(p3g4 - txtplayer3trick4.Text)
+            lblp3s4.Text = y * -10
+
+
+        End If
+        'Player 3 guess 5 score
+        If txtplayer3guess5.Text = "" Or txtplayer3trick5.Text = "" Then
+            lblp3s5.Text = ""
+        ElseIf txtplayer3guess5.Text = 0 And txtplayer3trick5.Text = 0 Then
+
+            lblp3s5.Text = 10
+
+        ElseIf txtplayer3guess5.Text = p3g5 And txtplayer3trick5.Text = p3g5 Then
+
+            lblp3s5.Text = p3g5 * 11
+        ElseIf txtplayer3guess5.Text <> txtplayer3trick5.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p3g5 - txtplayer3trick5.Text)
+            lblp3s5.Text = y * -10
+
+        End If
+
+        'Player 3 guess 6 score
+
+
+        If txtplayer3guess6.Text = "" Or txtplayer3trick6.Text = "" Then
+            lblp3s6.Text = ""
+        ElseIf txtplayer3guess6.Text = 0 And txtplayer3trick6.Text = 0 Then
+
+            lblp3s6.Text = 10
+
+        ElseIf txtplayer3guess6.Text = p3g6 And txtplayer3trick6.Text = p3g6 Then
+
+            lblp3s6.Text = p3g6 * 11
+        ElseIf txtplayer3guess6.Text <> txtplayer3trick6.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p3g6 - txtplayer3trick6.Text)
+            lblp3s6.Text = y * -10
+
+        End If
+
+        'Player 3 guess 7 score
+
+        If txtplayer3guess7.Text = "" Or txtplayer3trick7.Text = "" Then
+            lblp3s7.Text = ""
+        ElseIf txtplayer3guess7.Text = 0 And txtplayer3trick7.Text = 0 Then
+
+            lblp3s7.Text = 10
+
+        ElseIf txtplayer3guess7.Text = p3g7 And txtplayer3trick7.Text = p3g7 Then
+
+            lblp3s7.Text = p3g7 * 11
+        ElseIf txtplayer3guess7.Text <> txtplayer3trick7.Text Then
+            Dim y As Integer
+            y = Math.Abs(p3g7 - txtplayer3trick7.Text)
+            lblp3s7.Text = y * -10
+
+
+        End If
+        'Player 3 guess 8 score
+
+        If txtplayer3guess8.Text = "" Or txtplayer3trick8.Text = "" Then
+            lblp3s8.Text = ""
+        ElseIf txtplayer3guess8.Text = 0 And txtplayer3trick8.Text = 0 Then
+
+            lblp3s8.Text = 10
+
+        ElseIf txtplayer3guess8.Text = txtplayer3trick8.Text Then
+
+            lblp3s8.Text = p3g8 * 11
+
+        ElseIf txtplayer3guess8.Text <> txtplayer3trick8.Text Then
+            Dim y As Integer
+            y = Math.Abs(p3g8 - txtplayer3trick8.Text)
+            lblp3s8.Text = y * -10
+        End If
+
+        'Player 3 guess 9 score
+
+
+        If txtplayer3guess9.Text = "" Or txtplayer3trick9.Text = "" Then
+            lblp3s9.Text = ""
+        ElseIf txtplayer3guess9.Text = 0 And txtplayer3trick9.Text = 0 Then
+
+            lblp3s9.Text = 10
+
+        ElseIf txtplayer3guess9.Text = txtplayer3trick9.Text Then
+
+            lblp3s9.Text = p3g9 * 11
+
+        ElseIf txtplayer3guess9.Text <> txtplayer3trick9.Text Then
+            Dim y As Integer
+            y = Math.Abs(p3g9 - txtplayer3trick9.Text)
+            lblp3s9.Text = y * -10
+
+        End If
+
+
+        'Player 3 guess 10
+        If txtplayer3guess10.Text = "" Or txtplayer3trick10.Text = "" Then
+            lblp3s10.Text = ""
+        ElseIf txtplayer3guess10.Text = 0 And txtplayer3trick10.Text = 0 Then
+
+            lblp3s10.Text = 10
+
+        ElseIf txtplayer3guess10.Text = p3g10 And txtplayer3trick10.Text = p3g10 Then
+
+            lblp3s10.Text = p3g10 * 11
+        ElseIf txtplayer3guess10.Text <> txtplayer3trick10.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p3g10 - txtplayer3trick10.Text)
+            lblp3s10.Text = x * -10
+
+        End If
+        'Player 3 guess 11 score
+
+
+        If txtplayer3guess11.Text = "" Or txtplayer3trick11.Text = "" Then
+            lblp3s11.Text = ""
+        ElseIf txtplayer3guess11.Text = 0 And txtplayer3trick11.Text = 0 Then
+
+            lblp3s11.Text = 10
+
+        ElseIf txtplayer3guess11.Text = p3g11 And txtplayer3trick11.Text = p3g11 Then
+
+            lblp3s11.Text = p3g11 * 11
+        ElseIf txtplayer3guess11.Text <> txtplayer3trick11.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p3g11 - txtplayer3trick11.Text)
+            lblp3s11.Text = x * -10
+
+        End If
+
+        'Player 3 guess 12 score
+
+        If txtplayer3guess12.Text = "" Or txtplayer3trick12.Text = "" Then
+            lblp3s12.Text = ""
+        ElseIf txtplayer3guess12.Text = 0 And txtplayer3trick12.Text = 0 Then
+
+            lblp3s12.Text = 10
+
+        ElseIf txtplayer3guess12.Text = p3g12 And txtplayer3trick12.Text = p3g12 Then
+
+            lblp3s12.Text = p3g12 * 11
+        ElseIf txtplayer3guess12.Text <> txtplayer3trick12.Text Then
+            Dim x As Integer
+            x = Math.Abs(p3g12 - txtplayer3trick12.Text)
+            lblp3s12.Text = x * -10
+
+
+        End If
+        'Player 3 guess 13 score
+
+        If txtplayer3guess13.Text = "" Or txtplayer3trick13.Text = "" Then
+            lblp3s13.Text = ""
+        ElseIf txtplayer3guess13.Text = 0 And txtplayer3trick13.Text = 0 Then
+
+            lblp3s13.Text = 10
+
+        ElseIf txtplayer3guess13.Text = txtplayer3trick13.Text Then
+
+            lblp3s13.Text = p3g13 * 11
+
+        ElseIf txtplayer3guess13.Text <> txtplayer3trick13.Text Then
+            Dim x As Integer
+            x = Math.Abs(p3g13 - txtplayer3trick13.Text)
+            lblp3s13.Text = x * -10
+
+
+        End If
+        'Player 3 guess 14 score
+        If txtplayer3guess14.Text = "" Or txtplayer3trick14.Text = "" Then
+            lblp3s14.Text = ""
+        ElseIf txtplayer3guess14.Text = 0 And txtplayer3trick14.Text = 0 Then
+
+            lblp3s14.Text = 10
+
+        ElseIf txtplayer3guess14.Text = p3g14 And txtplayer3trick14.Text = p3g14 Then
+
+            lblp3s14.Text = p3g14 * 11
+        ElseIf txtplayer3guess14.Text <> txtplayer3trick14.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p3g14 - txtplayer3trick14.Text)
+            lblp3s14.Text = x * -10
+
+        End If
+        'PLAYER 4
+
+        'Player 4 guess 1 score
+
+        If txtplayer4guess1.Text = "" Or txtplayer4trick1.Text = "" Then
+            lblp4s1.Text = ""
+        ElseIf txtplayer4guess1.Text = 0 And txtplayer4trick1.Text = 0 Then
+
+            lblp4s1.Text = 10
+
+        ElseIf txtplayer4guess1.Text = p4g1 And txtplayer4trick1.Text = p4g1 Then
+
+            lblp4s1.Text = p4g1 * 11
+        ElseIf txtplayer4guess1.Text <> txtplayer4trick1.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p4g1 - txtplayer4trick1.Text)
+            lblp4s1.Text = y * -10
+
+        End If
+
+        'Player 4 guess 2 score
+
+
+        If txtplayer4guess2.Text = "" Or txtplayer4trick2.Text = "" Then
+            lblp4s2.Text = ""
+        ElseIf txtplayer4guess2.Text = 0 And txtplayer4trick2.Text = 0 Then
+
+            lblp4s2.Text = 10
+
+        ElseIf txtplayer4guess2.Text = p4g2 And txtplayer4trick2.Text = p4g2 Then
+
+            lblp4s2.Text = p4g2 * 11
+        ElseIf txtplayer4guess2.Text <> txtplayer4trick2.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p4g2 - txtplayer4trick2.Text)
+            lblp4s2.Text = y * -10
+
+        End If
+
+        'Player 4 guess 3 score
+
+        If txtplayer4guess3.Text = "" Or txtplayer4trick3.Text = "" Then
+            lblp4s3.Text = ""
+        ElseIf txtplayer4guess3.Text = 0 And txtplayer4trick3.Text = 0 Then
+
+            lblp4s3.Text = 10
+
+        ElseIf txtplayer4guess3.Text = p4g3 And txtplayer4trick3.Text = p4g3 Then
+
+            lblp4s3.Text = p4g3 * 11
+        ElseIf txtplayer4guess3.Text <> txtplayer4trick3.Text Then
+            Dim y As Integer
+            y = Math.Abs(p4g3 - txtplayer4trick3.Text)
+            lblp4s3.Text = y * -10
+
+
+        End If
+        'Player 4 guess 4 score
+
+        If txtplayer4guess4.Text = "" Or txtplayer4trick4.Text = "" Then
+            lblp4s4.Text = ""
+        ElseIf txtplayer4guess4.Text = 0 And txtplayer4trick4.Text = 0 Then
+
+            lblp4s4.Text = 10
+
+        ElseIf txtplayer4guess4.Text = txtplayer4trick4.Text Then
+
+            lblp4s4.Text = p4g4 * 11
+
+        ElseIf txtplayer4guess4.Text <> txtplayer4trick4.Text Then
+            Dim y As Integer
+            y = Math.Abs(p4g4 - txtplayer4trick4.Text)
+            lblp4s4.Text = y * -10
+
+
+        End If
+        'Player 4 guess 5 score
+        If txtplayer4guess5.Text = "" Or txtplayer4trick5.Text = "" Then
+            lblp4s5.Text = ""
+        ElseIf txtplayer4guess5.Text = 0 And txtplayer4trick5.Text = 0 Then
+
+            lblp4s5.Text = 10
+
+        ElseIf txtplayer4guess5.Text = p4g5 And txtplayer4trick5.Text = p4g5 Then
+
+            lblp4s5.Text = p4g5 * 11
+        ElseIf txtplayer4guess5.Text <> txtplayer4trick5.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p4g5 - txtplayer4trick5.Text)
+            lblp4s5.Text = y * -10
+
+        End If
+
+        'Player 4 guess 6 score
+
+
+        If txtplayer4guess6.Text = "" Or txtplayer4trick6.Text = "" Then
+            lblp4s6.Text = ""
+        ElseIf txtplayer4guess6.Text = 0 And txtplayer4trick6.Text = 0 Then
+
+            lblp4s6.Text = 10
+
+        ElseIf txtplayer4guess6.Text = p4g6 And txtplayer4trick6.Text = p4g6 Then
+
+            lblp4s6.Text = p4g6 * 11
+        ElseIf txtplayer4guess6.Text <> txtplayer4trick6.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p4g6 - txtplayer4trick6.Text)
+            lblp4s6.Text = y * -10
+
+        End If
+
+        'Player 4 guess 7 score
+
+        If txtplayer4guess7.Text = "" Or txtplayer4trick7.Text = "" Then
+            lblp4s7.Text = ""
+        ElseIf txtplayer4guess7.Text = 0 And txtplayer4trick7.Text = 0 Then
+
+            lblp4s7.Text = 10
+
+        ElseIf txtplayer4guess7.Text = p4g7 And txtplayer4trick7.Text = p4g7 Then
+
+            lblp4s7.Text = p4g7 * 11
+        ElseIf txtplayer4guess7.Text <> txtplayer4trick7.Text Then
+            Dim y As Integer
+            y = Math.Abs(p4g7 - txtplayer4trick7.Text)
+            lblp4s7.Text = y * -10
+
+
+        End If
+        'Player 4 guess 8 score
+
+        If txtplayer4guess8.Text = "" Or txtplayer4trick8.Text = "" Then
+            lblp4s8.Text = ""
+        ElseIf txtplayer4guess8.Text = 0 And txtplayer4trick8.Text = 0 Then
+
+            lblp4s8.Text = 10
+
+        ElseIf txtplayer4guess8.Text = txtplayer4trick8.Text Then
+
+            lblp4s8.Text = p4g8 * 11
+
+        ElseIf txtplayer4guess8.Text <> txtplayer4trick8.Text Then
+            Dim y As Integer
+            y = Math.Abs(p4g8 - txtplayer4trick8.Text)
+            lblp4s8.Text = y * -10
+        End If
+
+        'Player 4 guess 9 score
+
+
+        If txtplayer4guess9.Text = "" Or txtplayer4trick9.Text = "" Then
+            lblp4s9.Text = ""
+        ElseIf txtplayer4guess9.Text = 0 And txtplayer4trick9.Text = 0 Then
+
+            lblp4s9.Text = 10
+
+        ElseIf txtplayer4guess9.Text = txtplayer4trick9.Text Then
+
+            lblp4s9.Text = p4g9 * 11
+
+        ElseIf txtplayer4guess9.Text <> txtplayer4trick9.Text Then
+            Dim y As Integer
+            y = Math.Abs(p4g9 - txtplayer4trick9.Text)
+            lblp4s9.Text = y * -10
+
+        End If
+
+
+        'Player 4 guess 10
+        If txtplayer4guess10.Text = "" Or txtplayer4trick10.Text = "" Then
+            lblp4s10.Text = ""
+        ElseIf txtplayer4guess10.Text = 0 And txtplayer4trick10.Text = 0 Then
+
+            lblp4s10.Text = 10
+
+        ElseIf txtplayer4guess10.Text = p4g10 And txtplayer4trick10.Text = p4g10 Then
+
+            lblp4s10.Text = p4g10 * 11
+        ElseIf txtplayer4guess10.Text <> txtplayer4trick10.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p4g10 - txtplayer4trick10.Text)
+            lblp4s10.Text = x * -10
+
+        End If
+        'Player 4 guess 11 score
+
+
+        If txtplayer4guess11.Text = "" Or txtplayer4trick11.Text = "" Then
+            lblp4s11.Text = ""
+        ElseIf txtplayer4guess11.Text = 0 And txtplayer4trick11.Text = 0 Then
+
+            lblp4s11.Text = 10
+
+        ElseIf txtplayer4guess11.Text = p4g11 And txtplayer4trick11.Text = p4g11 Then
+
+            lblp4s11.Text = p4g11 * 11
+        ElseIf txtplayer4guess11.Text <> txtplayer4trick11.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p4g11 - txtplayer4trick11.Text)
+            lblp4s11.Text = x * -10
+
+        End If
+
+        'Player 4 guess 12 score
+
+        If txtplayer4guess12.Text = "" Or txtplayer4trick12.Text = "" Then
+            lblp4s12.Text = ""
+        ElseIf txtplayer4guess12.Text = 0 And txtplayer4trick12.Text = 0 Then
+
+            lblp4s12.Text = 10
+
+        ElseIf txtplayer4guess12.Text = p4g12 And txtplayer4trick12.Text = p4g12 Then
+
+            lblp4s12.Text = p4g12 * 11
+        ElseIf txtplayer4guess12.Text <> txtplayer4trick12.Text Then
+            Dim x As Integer
+            x = Math.Abs(p4g12 - txtplayer4trick12.Text)
+            lblp4s12.Text = x * -10
+
+
+        End If
+        'Player 4 guess 13 score
+
+        If txtplayer4guess13.Text = "" Or txtplayer4trick13.Text = "" Then
+            lblp4s13.Text = ""
+        ElseIf txtplayer4guess13.Text = 0 And txtplayer4trick13.Text = 0 Then
+
+            lblp4s13.Text = 10
+
+        ElseIf txtplayer4guess13.Text = txtplayer4trick13.Text Then
+
+            lblp4s13.Text = p4g13 * 11
+
+        ElseIf txtplayer4guess13.Text <> txtplayer4trick13.Text Then
+            Dim x As Integer
+            x = Math.Abs(p4g13 - txtplayer4trick13.Text)
+            lblp4s13.Text = x * -10
+
+
+        End If
+        'Player 4 guess 14 score
+        If txtplayer4guess14.Text = "" Or txtplayer4trick14.Text = "" Then
+            lblp4s14.Text = ""
+        ElseIf txtplayer4guess14.Text = 0 And txtplayer4trick14.Text = 0 Then
+
+            lblp4s14.Text = 10
+
+        ElseIf txtplayer4guess14.Text = p4g14 And txtplayer4trick14.Text = p4g14 Then
+
+            lblp4s14.Text = p4g14 * 11
+        ElseIf txtplayer4guess14.Text <> txtplayer4trick14.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p4g14 - txtplayer4trick14.Text)
+            lblp4s14.Text = x * -10
+
+        End If
+
+        'Player 5
+
+
+        'Player 5 guess 1 score
+
+        If txtplayer5guess1.Text = "" Or txtplayer5trick1.Text = "" Then
+            lblp5s1.Text = ""
+        ElseIf txtplayer5guess1.Text = 0 And txtplayer5trick1.Text = 0 Then
+
+            lblp5s1.Text = 10
+
+        ElseIf txtplayer5guess1.Text = p5g1 And txtplayer5trick1.Text = p5g1 Then
+
+            lblp5s1.Text = p5g1 * 11
+        ElseIf txtplayer5guess1.Text <> txtplayer5trick1.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p5g1 - txtplayer5trick1.Text)
+            lblp5s1.Text = y * -10
+
+        End If
+
+        'Player 5 guess 2 score
+
+
+        If txtplayer5guess2.Text = "" Or txtplayer5trick2.Text = "" Then
+            lblp5s2.Text = ""
+        ElseIf txtplayer5guess2.Text = 0 And txtplayer5trick2.Text = 0 Then
+
+            lblp5s2.Text = 10
+
+        ElseIf txtplayer5guess2.Text = p5g2 And txtplayer5trick2.Text = p5g2 Then
+
+            lblp5s2.Text = p5g2 * 11
+        ElseIf txtplayer5guess2.Text <> txtplayer5trick2.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p5g2 - txtplayer5trick2.Text)
+            lblp5s2.Text = y * -10
+
+        End If
+
+        'Player 5 guess 3 score
+
+        If txtplayer5guess3.Text = "" Or txtplayer5trick3.Text = "" Then
+            lblp5s3.Text = ""
+        ElseIf txtplayer5guess3.Text = 0 And txtplayer5trick3.Text = 0 Then
+
+            lblp5s3.Text = 10
+
+        ElseIf txtplayer5guess3.Text = p5g3 And txtplayer5trick3.Text = p5g3 Then
+
+            lblp5s3.Text = p5g3 * 11
+        ElseIf txtplayer5guess3.Text <> txtplayer5trick3.Text Then
+            Dim y As Integer
+            y = Math.Abs(p5g3 - txtplayer5trick3.Text)
+            lblp5s3.Text = y * -10
+
+
+        End If
+        'Player 5 guess 4 score
+
+        If txtplayer5guess4.Text = "" Or txtplayer5trick4.Text = "" Then
+            lblp5s4.Text = ""
+        ElseIf txtplayer5guess4.Text = 0 And txtplayer5trick4.Text = 0 Then
+
+            lblp5s4.Text = 10
+
+        ElseIf txtplayer5guess4.Text = txtplayer5trick4.Text Then
+
+            lblp5s4.Text = p5g4 * 11
+
+        ElseIf txtplayer5guess4.Text <> txtplayer5trick4.Text Then
+            Dim y As Integer
+            y = Math.Abs(p5g4 - txtplayer5trick4.Text)
+            lblp5s4.Text = y * -10
+
+
+        End If
+        'Player 5 guess 5 score
+        If txtplayer5guess5.Text = "" Or txtplayer5trick5.Text = "" Then
+            lblp5s5.Text = ""
+        ElseIf txtplayer5guess5.Text = 0 And txtplayer5trick5.Text = 0 Then
+
+            lblp5s5.Text = 10
+
+        ElseIf txtplayer5guess5.Text = p5g5 And txtplayer5trick5.Text = p5g5 Then
+
+            lblp5s5.Text = p5g5 * 11
+        ElseIf txtplayer5guess5.Text <> txtplayer5trick5.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p5g5 - txtplayer5trick5.Text)
+            lblp5s5.Text = y * -10
+
+        End If
+
+        'Player 5 guess 6 score
+
+
+        If txtplayer5guess6.Text = "" Or txtplayer5trick6.Text = "" Then
+            lblp5s6.Text = ""
+        ElseIf txtplayer5guess6.Text = 0 And txtplayer5trick6.Text = 0 Then
+
+            lblp5s6.Text = 10
+
+        ElseIf txtplayer5guess6.Text = p5g6 And txtplayer5trick6.Text = p5g6 Then
+
+            lblp5s6.Text = p5g6 * 11
+        ElseIf txtplayer5guess6.Text <> txtplayer5trick6.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p5g6 - txtplayer5trick6.Text)
+            lblp5s6.Text = y * -10
+
+        End If
+
+        'Player 5 guess 7 score
+
+        If txtplayer5guess7.Text = "" Or txtplayer5trick7.Text = "" Then
+            lblp5s7.Text = ""
+        ElseIf txtplayer5guess7.Text = 0 And txtplayer5trick7.Text = 0 Then
+
+            lblp5s7.Text = 10
+
+        ElseIf txtplayer5guess7.Text = p5g7 And txtplayer5trick7.Text = p5g7 Then
+
+            lblp5s7.Text = p5g7 * 11
+        ElseIf txtplayer5guess7.Text <> txtplayer5trick7.Text Then
+            Dim y As Integer
+            y = Math.Abs(p5g7 - txtplayer5trick7.Text)
+            lblp5s7.Text = y * -10
+
+
+        End If
+        'Player 5 guess 8 score
+
+        If txtplayer5guess8.Text = "" Or txtplayer5trick8.Text = "" Then
+            lblp5s8.Text = ""
+        ElseIf txtplayer5guess8.Text = 0 And txtplayer5trick8.Text = 0 Then
+
+            lblp5s8.Text = 10
+
+        ElseIf txtplayer5guess8.Text = txtplayer5trick8.Text Then
+
+            lblp5s8.Text = p5g8 * 11
+
+        ElseIf txtplayer5guess8.Text <> txtplayer5trick8.Text Then
+            Dim y As Integer
+            y = Math.Abs(p5g8 - txtplayer5trick8.Text)
+            lblp5s8.Text = y * -10
+        End If
+
+        'Player 5 guess 9 score
+
+
+        If txtplayer5guess9.Text = "" Or txtplayer5trick9.Text = "" Then
+            lblp5s9.Text = ""
+        ElseIf txtplayer5guess9.Text = 0 And txtplayer5trick9.Text = 0 Then
+
+            lblp5s9.Text = 10
+
+        ElseIf txtplayer5guess9.Text = txtplayer5trick9.Text Then
+
+            lblp5s9.Text = p5g9 * 11
+
+        ElseIf txtplayer5guess9.Text <> txtplayer5trick9.Text Then
+            Dim y As Integer
+            y = Math.Abs(p5g9 - txtplayer5trick9.Text)
+            lblp5s9.Text = y * -10
+
+        End If
+
+
+        'Player 5 guess 10
+        If txtplayer5guess10.Text = "" Or txtplayer5trick10.Text = "" Then
+            lblp5s10.Text = ""
+        ElseIf txtplayer5guess10.Text = 0 And txtplayer5trick10.Text = 0 Then
+
+            lblp5s10.Text = 10
+
+        ElseIf txtplayer5guess10.Text = p5g10 And txtplayer5trick10.Text = p5g10 Then
+
+            lblp5s10.Text = p5g10 * 11
+        ElseIf txtplayer5guess10.Text <> txtplayer5trick10.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p5g10 - txtplayer5trick10.Text)
+            lblp5s10.Text = x * -10
+
+        End If
+        'Player 5 guess 11 score
+
+
+        If txtplayer5guess11.Text = "" Or txtplayer5trick11.Text = "" Then
+            lblp5s11.Text = ""
+        ElseIf txtplayer5guess11.Text = 0 And txtplayer5trick11.Text = 0 Then
+
+            lblp5s11.Text = 10
+
+        ElseIf txtplayer5guess11.Text = p5g11 And txtplayer5trick11.Text = p5g11 Then
+
+            lblp5s11.Text = p5g11 * 11
+        ElseIf txtplayer5guess11.Text <> txtplayer5trick11.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p5g11 - txtplayer5trick11.Text)
+            lblp5s11.Text = x * -10
+
+        End If
+
+        'Player 5 guess 12 score
+
+        If txtplayer5guess12.Text = "" Or txtplayer5trick12.Text = "" Then
+            lblp5s12.Text = ""
+        ElseIf txtplayer5guess12.Text = 0 And txtplayer5trick12.Text = 0 Then
+
+            lblp5s12.Text = 10
+
+        ElseIf txtplayer5guess12.Text = p5g12 And txtplayer5trick12.Text = p5g12 Then
+
+            lblp5s12.Text = p5g12 * 11
+        ElseIf txtplayer5guess12.Text <> txtplayer5trick12.Text Then
+            Dim x As Integer
+            x = Math.Abs(p5g12 - txtplayer5trick12.Text)
+            lblp5s12.Text = x * -10
+
+
+        End If
+        'Player 5 guess 13 score
+
+        If txtplayer5guess13.Text = "" Or txtplayer5trick13.Text = "" Then
+            lblp5s13.Text = ""
+        ElseIf txtplayer5guess13.Text = 0 And txtplayer5trick13.Text = 0 Then
+
+            lblp5s13.Text = 10
+
+        ElseIf txtplayer5guess13.Text = txtplayer5trick13.Text Then
+
+            lblp5s13.Text = p5g13 * 11
+
+        ElseIf txtplayer5guess13.Text <> txtplayer5trick13.Text Then
+            Dim x As Integer
+            x = Math.Abs(p5g13 - txtplayer5trick13.Text)
+            lblp5s13.Text = x * -10
+
+
+        End If
+        'Player 5 guess 14 score
+        If txtplayer5guess14.Text = "" Or txtplayer5trick14.Text = "" Then
+            lblp5s14.Text = ""
+        ElseIf txtplayer5guess14.Text = 0 And txtplayer5trick14.Text = 0 Then
+
+            lblp5s14.Text = 10
+
+        ElseIf txtplayer5guess14.Text = p5g14 And txtplayer5trick14.Text = p5g14 Then
+
+            lblp5s14.Text = p5g14 * 11
+        ElseIf txtplayer5guess14.Text <> txtplayer5trick14.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p5g14 - txtplayer5trick14.Text)
+            lblp5s14.Text = x * -10
+
+        End If
+
+        'PLAYER 6
+
+        'Player 6 guess 1 score
+
+        If txtplayer6guess1.Text = "" Or txtplayer6trick1.Text = "" Then
+            lblp6s1.Text = ""
+        ElseIf txtplayer6guess1.Text = 0 And txtplayer6trick1.Text = 0 Then
+
+            lblp6s1.Text = 10
+
+       
+
+        ElseIf txtplayer6guess1.Text = p6g1 And txtplayer6trick1.Text = p6g1 Then
+
+            lblp6s1.Text = p6g1 * 11
+        ElseIf txtplayer6guess1.Text <> txtplayer6trick1.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p6g1 - txtplayer6trick1.Text)
+            lblp6s1.Text = y * -10
+
+        End If
+
+        'Player 6 guess 2 score
+
+
+        If txtplayer6guess2.Text = "" Or txtplayer6trick2.Text = "" Then
+            lblp6s2.Text = ""
+        ElseIf txtplayer6guess2.Text = 0 And txtplayer6trick2.Text = 0 Then
+
+            lblp6s2.Text = 10
+
+        ElseIf txtplayer6guess2.Text = p6g2 And txtplayer6trick2.Text = p6g2 Then
+
+            lblp6s2.Text = p6g2 * 11
+        ElseIf txtplayer6guess2.Text <> txtplayer6trick2.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p6g2 - txtplayer6trick2.Text)
+            lblp6s2.Text = y * -10
+
+        End If
+
+        'Player 6 guess 3 score
+
+        If txtplayer6guess3.Text = "" Or txtplayer6trick3.Text = "" Then
+            lblp6s3.Text = ""
+        ElseIf txtplayer6guess3.Text = 0 And txtplayer6trick3.Text = 0 Then
+
+            lblp6s3.Text = 10
+
+        ElseIf txtplayer6guess3.Text = p6g3 And txtplayer6trick3.Text = p6g3 Then
+
+            lblp6s3.Text = p6g3 * 11
+        ElseIf txtplayer6guess3.Text <> txtplayer6trick3.Text Then
+            Dim y As Integer
+            y = Math.Abs(p6g3 - txtplayer6trick3.Text)
+            lblp6s3.Text = y * -10
+
+
+        End If
+        'Player 6 guess 4 score
+
+        If txtplayer6guess4.Text = "" Or txtplayer6trick4.Text = "" Then
+            lblp6s4.Text = ""
+        ElseIf txtplayer6guess4.Text = 0 And txtplayer6trick4.Text = 0 Then
+
+            lblp6s4.Text = 10
+
+        ElseIf txtplayer6guess4.Text = txtplayer6trick4.Text Then
+
+            lblp6s4.Text = p6g4 * 11
+
+        ElseIf txtplayer6guess4.Text <> txtplayer6trick4.Text Then
+            Dim y As Integer
+            y = Math.Abs(p6g4 - txtplayer6trick4.Text)
+            lblp6s4.Text = y * -10
+
+
+        End If
+        'Player 6 guess 5 score
+        If txtplayer6guess5.Text = "" Or txtplayer6trick5.Text = "" Then
+            lblp6s5.Text = ""
+        ElseIf txtplayer6guess5.Text = 0 And txtplayer6trick5.Text = 0 Then
+
+            lblp6s5.Text = 10
+
+        ElseIf txtplayer6guess5.Text = p6g5 And txtplayer6trick5.Text = p6g5 Then
+
+            lblp6s5.Text = p6g5 * 11
+        ElseIf txtplayer6guess5.Text <> txtplayer6trick5.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p6g5 - txtplayer6trick5.Text)
+            lblp6s5.Text = y * -10
+
+        End If
+
+        'Player 6 guess 6 score
+
+
+        If txtplayer6guess6.Text = "" Or txtplayer6trick6.Text = "" Then
+            lblp6s6.Text = ""
+        ElseIf txtplayer6guess6.Text = 0 And txtplayer6trick6.Text = 0 Then
+
+            lblp6s6.Text = 10
+
+        ElseIf txtplayer6guess6.Text = p6g6 And txtplayer6trick6.Text = p6g6 Then
+
+            lblp6s6.Text = p6g6 * 11
+        ElseIf txtplayer6guess6.Text <> txtplayer6trick6.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p6g6 - txtplayer6trick6.Text)
+            lblp6s6.Text = y * -10
+
+        End If
+
+        'Player 6 guess 7 score
+
+        If txtplayer6guess7.Text = "" Or txtplayer6trick7.Text = "" Then
+            lblp6s7.Text = ""
+        ElseIf txtplayer6guess7.Text = 0 And txtplayer6trick7.Text = 0 Then
+
+            lblp6s7.Text = 10
+
+        ElseIf txtplayer6guess7.Text = p6g7 And txtplayer6trick7.Text = p6g7 Then
+
+            lblp6s7.Text = p6g7 * 11
+        ElseIf txtplayer6guess7.Text <> txtplayer6trick7.Text Then
+            Dim y As Integer
+            y = Math.Abs(p6g7 - txtplayer6trick7.Text)
+            lblp6s7.Text = y * -10
+
+
+        End If
+        'Player 6 guess 8 score
+
+        If txtplayer6guess8.Text = "" Or txtplayer6trick8.Text = "" Then
+            lblp6s8.Text = ""
+        ElseIf txtplayer6guess8.Text = 0 And txtplayer6trick8.Text = 0 Then
+
+            lblp6s8.Text = 10
+
+        ElseIf txtplayer6guess8.Text = txtplayer6trick8.Text Then
+
+            lblp6s8.Text = p6g8 * 11
+
+        ElseIf txtplayer6guess8.Text <> txtplayer6trick8.Text Then
+            Dim y As Integer
+            y = Math.Abs(p6g8 - txtplayer6trick8.Text)
+            lblp6s8.Text = y * -10
+        End If
+
+        'Player 6 guess 9 score
+
+
+        If txtplayer6guess9.Text = "" Or txtplayer6trick9.Text = "" Then
+            lblp6s9.Text = ""
+        ElseIf txtplayer6guess9.Text = 0 And txtplayer6trick9.Text = 0 Then
+
+            lblp6s9.Text = 10
+
+        ElseIf txtplayer6guess9.Text = txtplayer6trick9.Text Then
+
+            lblp6s9.Text = p6g9 * 11
+
+        ElseIf txtplayer6guess9.Text <> txtplayer6trick9.Text Then
+            Dim y As Integer
+            y = Math.Abs(p6g9 - txtplayer6trick9.Text)
+            lblp6s9.Text = y * -10
+
+        End If
+
+
+        'Player 6 guess 10
+        If txtplayer6guess10.Text = "" Or txtplayer6trick10.Text = "" Then
+            lblp6s10.Text = ""
+        ElseIf txtplayer6guess10.Text = 0 And txtplayer6trick10.Text = 0 Then
+
+            lblp6s10.Text = 10
+
+        ElseIf txtplayer6guess10.Text = p6g10 And txtplayer6trick10.Text = p6g10 Then
+
+            lblp6s10.Text = p6g10 * 11
+        ElseIf txtplayer6guess10.Text <> txtplayer6trick10.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p6g10 - txtplayer6trick10.Text)
+            lblp6s10.Text = x * -10
+
+        End If
+        'Player 6 guess 11 score
+
+
+        If txtplayer6guess11.Text = "" Or txtplayer6trick11.Text = "" Then
+            lblp6s11.Text = ""
+        ElseIf txtplayer6guess11.Text = 0 And txtplayer6trick11.Text = 0 Then
+
+            lblp6s11.Text = 10
+
+        ElseIf txtplayer6guess11.Text = p6g11 And txtplayer6trick11.Text = p6g11 Then
+
+            lblp6s11.Text = p6g11 * 11
+        ElseIf txtplayer6guess11.Text <> txtplayer6trick11.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p6g11 - txtplayer6trick11.Text)
+            lblp6s11.Text = x * -10
+
+        End If
+
+        'Player 6 guess 12 score
+
+        If txtplayer6guess12.Text = "" Or txtplayer6trick12.Text = "" Then
+            lblp6s12.Text = ""
+        ElseIf txtplayer6guess12.Text = 0 And txtplayer6trick12.Text = 0 Then
+
+            lblp6s12.Text = 10
+
+        ElseIf txtplayer6guess12.Text = p6g12 And txtplayer6trick12.Text = p6g12 Then
+
+            lblp6s12.Text = p6g12 * 11
+        ElseIf txtplayer6guess12.Text <> txtplayer6trick12.Text Then
+            Dim x As Integer
+            x = Math.Abs(p6g12 - txtplayer6trick12.Text)
+            lblp6s12.Text = x * -10
+
+
+        End If
+        'Player 6 guess 13 score
+
+        If txtplayer6guess13.Text = "" Or txtplayer6trick13.Text = "" Then
+            lblp6s13.Text = ""
+        ElseIf txtplayer6guess13.Text = 0 And txtplayer6trick13.Text = 0 Then
+
+            lblp6s13.Text = 10
+
+        ElseIf txtplayer6guess13.Text = txtplayer6trick13.Text Then
+
+            lblp6s13.Text = p6g13 * 11
+
+        ElseIf txtplayer6guess13.Text <> txtplayer6trick13.Text Then
+            Dim x As Integer
+            x = Math.Abs(p6g13 - txtplayer6trick13.Text)
+            lblp6s13.Text = x * -10
+
+
+        End If
+        'Player 6 guess 14 score
+        If txtplayer6guess14.Text = "" Or txtplayer6trick14.Text = "" Then
+            lblp6s14.Text = ""
+        ElseIf txtplayer6guess14.Text = 0 And txtplayer6trick14.Text = 0 Then
+
+            lblp6s14.Text = 10
+
+        ElseIf txtplayer6guess14.Text = p6g14 And txtplayer6trick14.Text = p6g14 Then
+
+            lblp6s14.Text = p6g14 * 11
+        ElseIf txtplayer6guess14.Text <> txtplayer6trick14.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p6g14 - txtplayer6trick14.Text)
+            lblp6s14.Text = x * -10
+
+        End If
+
+        'Player 7
+
+
+        'Player 7 guess 1 score
+
+        If txtplayer7guess1.Text = "" Or txtplayer7trick1.Text = "" Then
+            lblp7s1.Text = ""
+        ElseIf txtplayer7guess1.Text = 0 And txtplayer7trick1.Text = 0 Then
+
+            lblp7s1.Text = 10
+
+        ElseIf txtplayer7guess1.Text = p7g1 And txtplayer7trick1.Text = p7g1 Then
+
+            lblp7s1.Text = p7g1 * 11
+        ElseIf txtplayer7guess1.Text <> txtplayer7trick1.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p7g1 - txtplayer7trick1.Text)
+            lblp7s1.Text = y * -10
+
+        End If
+
+        'Player 7 guess 2 score
+
+
+        If txtplayer7guess2.Text = "" Or txtplayer7trick2.Text = "" Then
+            lblp7s2.Text = ""
+        ElseIf txtplayer7guess2.Text = 0 And txtplayer7trick2.Text = 0 Then
+
+            lblp7s2.Text = 10
+
+        ElseIf txtplayer7guess2.Text = p7g2 And txtplayer7trick2.Text = p7g2 Then
+
+            lblp7s2.Text = p7g2 * 11
+        ElseIf txtplayer7guess2.Text <> txtplayer7trick2.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p7g2 - txtplayer7trick2.Text)
+            lblp7s2.Text = y * -10
+
+        End If
+
+        'Player 7 guess 3 score
+
+        If txtplayer7guess3.Text = "" Or txtplayer7trick3.Text = "" Then
+            lblp7s3.Text = ""
+        ElseIf txtplayer7guess3.Text = 0 And txtplayer7trick3.Text = 0 Then
+
+            lblp7s3.Text = 10
+
+        ElseIf txtplayer7guess3.Text = p7g3 And txtplayer7trick3.Text = p7g3 Then
+
+            lblp7s3.Text = p7g3 * 11
+        ElseIf txtplayer7guess3.Text <> txtplayer7trick3.Text Then
+            Dim y As Integer
+            y = Math.Abs(p7g3 - txtplayer7trick3.Text)
+            lblp7s3.Text = y * -10
+
+
+        End If
+        'Player 7 guess 4 score
+
+        If txtplayer7guess4.Text = "" Or txtplayer7trick4.Text = "" Then
+            lblp7s4.Text = ""
+        ElseIf txtplayer7guess4.Text = 0 And txtplayer7trick4.Text = 0 Then
+
+            lblp7s4.Text = 10
+
+        ElseIf txtplayer7guess4.Text = txtplayer7trick4.Text Then
+
+            lblp7s4.Text = p7g4 * 11
+
+        ElseIf txtplayer7guess4.Text <> txtplayer7trick4.Text Then
+            Dim y As Integer
+            y = Math.Abs(p7g4 - txtplayer7trick4.Text)
+            lblp7s4.Text = y * -10
+
+
+        End If
+        'Player 7 guess 5 score
+        If txtplayer7guess5.Text = "" Or txtplayer7trick5.Text = "" Then
+            lblp7s5.Text = ""
+        ElseIf txtplayer7guess5.Text = 0 And txtplayer7trick5.Text = 0 Then
+
+            lblp7s5.Text = 10
+
+        ElseIf txtplayer7guess5.Text = p7g5 And txtplayer7trick5.Text = p7g5 Then
+
+            lblp7s5.Text = p7g5 * 11
+        ElseIf txtplayer7guess5.Text <> txtplayer7trick5.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p7g5 - txtplayer7trick5.Text)
+            lblp7s5.Text = y * -10
+
+        End If
+
+        'Player 7 guess 6 score
+
+
+        If txtplayer7guess6.Text = "" Or txtplayer7trick6.Text = "" Then
+            lblp7s6.Text = ""
+        ElseIf txtplayer7guess6.Text = 0 And txtplayer7trick6.Text = 0 Then
+
+            lblp7s6.Text = 10
+
+        ElseIf txtplayer7guess6.Text = p7g6 And txtplayer7trick6.Text = p7g6 Then
+
+            lblp7s6.Text = p7g6 * 11
+        ElseIf txtplayer7guess6.Text <> txtplayer7trick6.Text Then
+
+            Dim y As Integer
+            y = Math.Abs(p7g6 - txtplayer7trick6.Text)
+            lblp7s6.Text = y * -10
+
+        End If
+
+        'Player 7 guess 7 score
+
+        If txtplayer7guess7.Text = "" Or txtplayer7trick7.Text = "" Then
+            lblp7s7.Text = ""
+        ElseIf txtplayer7guess7.Text = 0 And txtplayer7trick7.Text = 0 Then
+
+            lblp7s7.Text = 10
+
+        ElseIf txtplayer7guess7.Text = p7g7 And txtplayer7trick7.Text = p7g7 Then
+
+            lblp7s7.Text = p7g7 * 11
+        ElseIf txtplayer7guess7.Text <> txtplayer7trick7.Text Then
+            Dim y As Integer
+            y = Math.Abs(p7g7 - txtplayer7trick7.Text)
+            lblp7s7.Text = y * -10
+
+
+        End If
+        'Player 7 guess 8 score
+
+        If txtplayer7guess8.Text = "" Or txtplayer7trick8.Text = "" Then
+            lblp7s8.Text = ""
+        ElseIf txtplayer7guess8.Text = 0 And txtplayer7trick8.Text = 0 Then
+
+            lblp7s8.Text = 10
+
+        ElseIf txtplayer7guess8.Text = txtplayer7trick8.Text Then
+
+            lblp7s8.Text = p7g8 * 11
+
+        ElseIf txtplayer7guess8.Text <> txtplayer7trick8.Text Then
+            Dim y As Integer
+            y = Math.Abs(p7g8 - txtplayer7trick8.Text)
+            lblp7s8.Text = y * -10
+        End If
+
+        'Player 7 guess 9 score
+
+
+        If txtplayer7guess9.Text = "" Or txtplayer7trick9.Text = "" Then
+            lblp7s9.Text = ""
+        ElseIf txtplayer7guess9.Text = 0 And txtplayer7trick9.Text = 0 Then
+
+            lblp7s9.Text = 10
+
+        ElseIf txtplayer7guess9.Text = txtplayer7trick9.Text Then
+
+            lblp7s9.Text = p7g9 * 11
+
+        ElseIf txtplayer7guess9.Text <> txtplayer7trick9.Text Then
+            Dim y As Integer
+            y = Math.Abs(p7g9 - txtplayer7trick9.Text)
+            lblp7s9.Text = y * -10
+
+        End If
+
+
+        'Player 7 guess 10
+        If txtplayer7guess10.Text = "" Or txtplayer7trick10.Text = "" Then
+            lblp7s10.Text = ""
+        ElseIf txtplayer7guess10.Text = 0 And txtplayer7trick10.Text = 0 Then
+
+            lblp7s10.Text = 10
+
+        ElseIf txtplayer7guess10.Text = p7g10 And txtplayer7trick10.Text = p7g10 Then
+
+            lblp7s10.Text = p7g10 * 11
+        ElseIf txtplayer7guess10.Text <> txtplayer7trick10.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p7g10 - txtplayer7trick10.Text)
+            lblp7s10.Text = x * -10
+
+        End If
+        'Player 7 guess 11 score
+
+
+        If txtplayer7guess11.Text = "" Or txtplayer7trick11.Text = "" Then
+            lblp7s11.Text = ""
+        ElseIf txtplayer7guess11.Text = 0 And txtplayer7trick11.Text = 0 Then
+
+            lblp7s11.Text = 10
+
+        ElseIf txtplayer7guess11.Text = p7g11 And txtplayer7trick11.Text = p7g11 Then
+
+            lblp7s11.Text = p7g11 * 11
+        ElseIf txtplayer7guess11.Text <> txtplayer7trick11.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p7g11 - txtplayer7trick11.Text)
+            lblp7s11.Text = x * -10
+
+        End If
+
+        'Player 7 guess 12 score
+
+        If txtplayer7guess12.Text = "" Or txtplayer7trick12.Text = "" Then
+            lblp7s12.Text = ""
+        ElseIf txtplayer7guess12.Text = 0 And txtplayer7trick12.Text = 0 Then
+
+            lblp7s12.Text = 10
+
+        ElseIf txtplayer7guess12.Text = p7g12 And txtplayer7trick12.Text = p7g12 Then
+
+            lblp7s12.Text = p7g12 * 11
+        ElseIf txtplayer7guess12.Text <> txtplayer7trick12.Text Then
+            Dim x As Integer
+            x = Math.Abs(p7g12 - txtplayer7trick12.Text)
+            lblp7s12.Text = x * -10
+
+
+        End If
+        'Player 7 guess 13 score
+
+        If txtplayer7guess13.Text = "" Or txtplayer7trick13.Text = "" Then
+            lblp7s13.Text = ""
+        ElseIf txtplayer7guess13.Text = 0 And txtplayer7trick13.Text = 0 Then
+
+            lblp7s13.Text = 10
+
+        ElseIf txtplayer7guess13.Text = txtplayer7trick13.Text Then
+
+            lblp7s13.Text = p7g13 * 11
+
+        ElseIf txtplayer7guess13.Text <> txtplayer7trick13.Text Then
+            Dim x As Integer
+            x = Math.Abs(p7g13 - txtplayer7trick13.Text)
+            lblp7s13.Text = x * -10
+
+
+        End If
+        'Player 7 guess 14 score
+        If txtplayer7guess14.Text = "" Or txtplayer7trick14.Text = "" Then
+            lblp7s14.Text = ""
+        ElseIf txtplayer7guess14.Text = 0 And txtplayer7trick14.Text = 0 Then
+
+            lblp7s14.Text = 10
+
+        ElseIf txtplayer7guess14.Text = p7g14 And txtplayer7trick14.Text = p7g14 Then
+
+            lblp7s14.Text = p7g14 * 11
+        ElseIf txtplayer7guess14.Text <> txtplayer7trick14.Text Then
+
+            Dim x As Integer
+            x = Math.Abs(p7g14 - txtplayer7trick14.Text)
+            lblp7s14.Text = x * -10
+
+        End If
+
+        txtp1score.Text = Val(lblp1s1.Text) + Val(lblp1s2.Text) + Val(lblp1s3.Text) + Val(lblp1s4.Text) + Val(lblp1s5.Text) + Val(lblp1s6.Text) + Val(lblp1s7.Text) + Val(lblp1s8.Text) + Val(lblp1s9.Text) + Val(lblp1s10.Text) + Val(lblp1s11.Text) + Val(lblp1s12.Text) + Val(lblp1s13.Text) + Val(lblp1s14.Text)
+        txtp2score.Text = Val(lblp2s1.Text) + Val(lblp2s2.Text) + Val(lblp2s3.Text) + Val(lblp2s4.Text) + Val(lblp2s5.Text) + Val(lblp2s6.Text) + Val(lblp2s7.Text) + Val(lblp2s8.Text) + Val(lblp2s9.Text) + Val(lblp2s10.Text) + Val(lblp2s11.Text) + Val(lblp2s12.Text) + Val(lblp2s13.Text) + Val(lblp2s14.Text)
+        txtp3score.Text = Val(lblp3s1.Text) + Val(lblp3s2.Text) + Val(lblp3s3.Text) + Val(lblp3s4.Text) + Val(lblp3s5.Text) + Val(lblp3s6.Text) + Val(lblp3s7.Text) + Val(lblp3s8.Text) + Val(lblp3s9.Text) + Val(lblp3s10.Text) + Val(lblp3s11.Text) + Val(lblp3s12.Text) + Val(lblp3s13.Text) + Val(lblp3s14.Text)
+        txtp4score.Text = Val(lblp4s1.Text) + Val(lblp4s2.Text) + Val(lblp4s3.Text) + Val(lblp4s4.Text) + Val(lblp4s5.Text) + Val(lblp4s6.Text) + Val(lblp4s7.Text) + Val(lblp4s8.Text) + Val(lblp4s9.Text) + Val(lblp4s10.Text) + Val(lblp4s11.Text) + Val(lblp4s12.Text) + Val(lblp4s13.Text) + Val(lblp4s14.Text)
+        txtp5score.Text = Val(lblp5s1.Text) + Val(lblp5s2.Text) + Val(lblp5s3.Text) + Val(lblp5s4.Text) + Val(lblp5s5.Text) + Val(lblp5s6.Text) + Val(lblp5s7.Text) + Val(lblp5s8.Text) + Val(lblp5s9.Text) + Val(lblp5s10.Text) + Val(lblp5s11.Text) + Val(lblp5s12.Text) + Val(lblp5s13.Text) + Val(lblp5s14.Text)
+        txtp6score.Text = Val(lblp6s1.Text) + Val(lblp6s2.Text) + Val(lblp6s3.Text) + Val(lblp6s4.Text) + Val(lblp6s5.Text) + Val(lblp6s6.Text) + Val(lblp6s7.Text) + Val(lblp6s8.Text) + Val(lblp6s9.Text) + Val(lblp6s10.Text) + Val(lblp6s11.Text) + Val(lblp6s12.Text) + Val(lblp6s13.Text) + Val(lblp6s14.Text)
+        txtp7score.Text = Val(lblp7s1.Text) + Val(lblp7s2.Text) + Val(lblp7s3.Text) + Val(lblp7s4.Text) + Val(lblp7s5.Text) + Val(lblp7s6.Text) + Val(lblp7s7.Text) + Val(lblp7s8.Text) + Val(lblp7s9.Text) + Val(lblp7s10.Text) + Val(lblp7s11.Text) + Val(lblp7s12.Text) + Val(lblp7s13.Text) + Val(lblp7s14.Text)
+
+        If txtp1score.Text < 0 Then
+            txtp1score.ForeColor = Color.Red
+
+        ElseIf txtp1score.Text >= 0 Then
+            txtp1score.ForeColor = Color.Black
+        End If
+
+        If txtp2score.Text < 0 Then
+            txtp2score.ForeColor = Color.Red
+
+        ElseIf txtp2score.Text >= 0 Then
+            txtp2score.ForeColor = Color.Black
+        End If
+        If txtp3score.Text < 0 Then
+            txtp3score.ForeColor = Color.Red
+
+        ElseIf txtp3score.Text >= 0 Then
+            txtp3score.ForeColor = Color.Black
+        End If
+
+        If txtp4score.Text < 0 Then
+            txtp4score.ForeColor = Color.Red
+
+        ElseIf txtp4score.Text >= 0 Then
+            txtp4score.ForeColor = Color.Black
+        End If
+
+        If txtp5score.Text < 0 Then
+            txtp5score.ForeColor = Color.Red
+
+        ElseIf txtp5score.Text >= 0 Then
+            txtp5score.ForeColor = Color.Black
+        End If
+        If txtp6score.Text < 0 Then
+            txtp6score.ForeColor = Color.Red
+
+        ElseIf txtp6score.Text >= 0 Then
+            txtp6score.ForeColor = Color.Black
+        End If
+
+        If txtp7score.Text < 0 Then
+            txtp7score.ForeColor = Color.Red
+
+        ElseIf txtp7score.Text >= 0 Then
+            txtp7score.ForeColor = Color.Black
+        End If
+
+        If txtplayer1guess14.Text <> "" Then
+            btnnewgame.Visible = True
+
+        End If
+        
+    End Sub
+
+    Private Sub Label120_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblp7s12.Click
+
+    End Sub
+
+    Private Sub btnnewgame_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnnewgame.Click
+        'clear player 1 score
+        txtp1score.Text = ""
+        txtplayer1guess1.Text = ""
+        txtplayer1guess2.Text = ""
+        txtplayer1guess3.Text = ""
+        txtplayer1guess4.Text = ""
+        txtplayer1guess5.Text = ""
+        txtplayer1guess6.Text = ""
+        txtplayer1guess7.Text = ""
+        txtplayer1guess8.Text = ""
+        txtplayer1guess9.Text = ""
+        txtplayer1guess10.Text = ""
+        txtplayer1guess11.Text = ""
+        txtplayer1guess12.Text = ""
+        txtplayer1guess13.Text = ""
+        txtplayer1guess14.Text = ""
+
+        txtplayer1trick1.Text = ""
+        txtplayer1trick2.Text = ""
+        txtplayer1trick3.Text = ""
+        txtplayer1trick4.Text = ""
+        txtplayer1trick5.Text = ""
+        txtplayer1trick6.Text = ""
+        txtplayer1trick7.Text = ""
+        txtplayer1trick8.Text = ""
+        txtplayer1trick9.Text = ""
+        txtplayer1trick10.Text = ""
+        txtplayer1trick11.Text = ""
+        txtplayer1trick12.Text = ""
+        txtplayer1trick13.Text = ""
+        txtplayer1trick14.Text = ""
+
+        'clear player 2 score
+        txtp2score.Text = ""
+        txtplayer2guess1.Text = ""
+        txtplayer2guess2.Text = ""
+        txtplayer2guess3.Text = ""
+        txtplayer2guess4.Text = ""
+        txtplayer2guess5.Text = ""
+        txtplayer2guess6.Text = ""
+        txtplayer2guess7.Text = ""
+        txtplayer2guess8.Text = ""
+        txtplayer2guess9.Text = ""
+        txtplayer2guess10.Text = ""
+        txtplayer2guess11.Text = ""
+        txtplayer2guess12.Text = ""
+        txtplayer2guess13.Text = ""
+        txtplayer2guess14.Text = ""
+
+        txtplayer2trick1.Text = ""
+        txtplayer2trick2.Text = ""
+        txtplayer2trick3.Text = ""
+        txtplayer2trick4.Text = ""
+        txtplayer2trick5.Text = ""
+        txtplayer2trick6.Text = ""
+        txtplayer2trick7.Text = ""
+        txtplayer2trick8.Text = ""
+        txtplayer2trick9.Text = ""
+        txtplayer2trick10.Text = ""
+        txtplayer2trick11.Text = ""
+        txtplayer2trick12.Text = ""
+        txtplayer2trick13.Text = ""
+        txtplayer2trick14.Text = ""
+
+        'clear player 3 score
+        txtp3score.Text = ""
+        txtplayer3guess1.Text = ""
+        txtplayer3guess2.Text = ""
+        txtplayer3guess3.Text = ""
+        txtplayer3guess4.Text = ""
+        txtplayer3guess5.Text = ""
+        txtplayer3guess6.Text = ""
+        txtplayer3guess7.Text = ""
+        txtplayer3guess8.Text = ""
+        txtplayer3guess9.Text = ""
+        txtplayer3guess10.Text = ""
+        txtplayer3guess11.Text = ""
+        txtplayer3guess12.Text = ""
+        txtplayer3guess13.Text = ""
+        txtplayer3guess14.Text = ""
+
+        txtplayer3trick1.Text = ""
+        txtplayer3trick2.Text = ""
+        txtplayer3trick3.Text = ""
+        txtplayer3trick4.Text = ""
+        txtplayer3trick5.Text = ""
+        txtplayer3trick6.Text = ""
+        txtplayer3trick7.Text = ""
+        txtplayer3trick8.Text = ""
+        txtplayer3trick9.Text = ""
+        txtplayer3trick10.Text = ""
+        txtplayer3trick11.Text = ""
+        txtplayer3trick12.Text = ""
+        txtplayer3trick13.Text = ""
+        txtplayer3trick14.Text = ""
+
+        'clear player 4 score
+        txtp4score.Text = ""
+        txtplayer4guess1.Text = ""
+        txtplayer4guess2.Text = ""
+        txtplayer4guess3.Text = ""
+        txtplayer4guess4.Text = ""
+        txtplayer4guess5.Text = ""
+        txtplayer4guess6.Text = ""
+        txtplayer4guess7.Text = ""
+        txtplayer4guess8.Text = ""
+        txtplayer4guess9.Text = ""
+        txtplayer4guess10.Text = ""
+        txtplayer4guess11.Text = ""
+        txtplayer4guess12.Text = ""
+        txtplayer4guess13.Text = ""
+        txtplayer4guess14.Text = ""
+
+        txtplayer4trick1.Text = ""
+        txtplayer4trick2.Text = ""
+        txtplayer4trick3.Text = ""
+        txtplayer4trick4.Text = ""
+        txtplayer4trick5.Text = ""
+        txtplayer4trick6.Text = ""
+        txtplayer4trick7.Text = ""
+        txtplayer4trick8.Text = ""
+        txtplayer4trick9.Text = ""
+        txtplayer4trick10.Text = ""
+        txtplayer4trick11.Text = ""
+        txtplayer4trick12.Text = ""
+        txtplayer4trick13.Text = ""
+        txtplayer4trick14.Text = ""
+
+        'clear player 5 score
+        txtp5score.Text = ""
+        txtplayer5guess1.Text = ""
+        txtplayer5guess2.Text = ""
+        txtplayer5guess3.Text = ""
+        txtplayer5guess4.Text = ""
+        txtplayer5guess5.Text = ""
+        txtplayer5guess6.Text = ""
+        txtplayer5guess7.Text = ""
+        txtplayer5guess8.Text = ""
+        txtplayer5guess9.Text = ""
+        txtplayer5guess10.Text = ""
+        txtplayer5guess11.Text = ""
+        txtplayer5guess12.Text = ""
+        txtplayer5guess13.Text = ""
+        txtplayer5guess14.Text = ""
+
+        txtplayer5trick1.Text = ""
+        txtplayer5trick2.Text = ""
+        txtplayer5trick3.Text = ""
+        txtplayer5trick4.Text = ""
+        txtplayer5trick5.Text = ""
+        txtplayer5trick6.Text = ""
+        txtplayer5trick7.Text = ""
+        txtplayer5trick8.Text = ""
+        txtplayer5trick9.Text = ""
+        txtplayer5trick10.Text = ""
+        txtplayer5trick11.Text = ""
+        txtplayer5trick12.Text = ""
+        txtplayer5trick13.Text = ""
+        txtplayer5trick14.Text = ""
+
+        'clear player 6 score
+        txtp6score.Text = ""
+        txtplayer6guess1.Text = ""
+        txtplayer6guess2.Text = ""
+        txtplayer6guess3.Text = ""
+        txtplayer6guess4.Text = ""
+        txtplayer6guess5.Text = ""
+        txtplayer6guess6.Text = ""
+        txtplayer6guess7.Text = ""
+        txtplayer6guess8.Text = ""
+        txtplayer6guess9.Text = ""
+        txtplayer6guess10.Text = ""
+        txtplayer6guess11.Text = ""
+        txtplayer6guess12.Text = ""
+        txtplayer6guess13.Text = ""
+        txtplayer6guess14.Text = ""
+
+        txtplayer6trick1.Text = ""
+        txtplayer6trick2.Text = ""
+        txtplayer6trick3.Text = ""
+        txtplayer6trick4.Text = ""
+        txtplayer6trick5.Text = ""
+        txtplayer6trick6.Text = ""
+        txtplayer6trick7.Text = ""
+        txtplayer6trick8.Text = ""
+        txtplayer6trick9.Text = ""
+        txtplayer6trick10.Text = ""
+        txtplayer6trick11.Text = ""
+        txtplayer6trick12.Text = ""
+        txtplayer6trick13.Text = ""
+        txtplayer6trick14.Text = ""
+
+        'clear player 7 score
+        txtp7score.Text = ""
+        txtplayer7guess1.Text = ""
+        txtplayer7guess2.Text = ""
+        txtplayer7guess3.Text = ""
+        txtplayer7guess4.Text = ""
+        txtplayer7guess5.Text = ""
+        txtplayer7guess6.Text = ""
+        txtplayer7guess7.Text = ""
+        txtplayer7guess8.Text = ""
+        txtplayer7guess9.Text = ""
+        txtplayer7guess10.Text = ""
+        txtplayer7guess11.Text = ""
+        txtplayer7guess12.Text = ""
+        txtplayer7guess13.Text = ""
+        txtplayer7guess14.Text = ""
+
+        txtplayer7trick1.Text = ""
+        txtplayer7trick2.Text = ""
+        txtplayer7trick3.Text = ""
+        txtplayer7trick4.Text = ""
+        txtplayer7trick5.Text = ""
+        txtplayer7trick6.Text = ""
+        txtplayer7trick7.Text = ""
+        txtplayer7trick8.Text = ""
+        txtplayer7trick9.Text = ""
+        txtplayer7trick10.Text = ""
+        txtplayer7trick11.Text = ""
+        txtplayer7trick12.Text = ""
+        txtplayer7trick13.Text = ""
+        txtplayer7trick14.Text = ""
+
+        btnnewgame.Visible = False
+
+    End Sub
+
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+
+    End Sub
+
+    Private Sub Label39_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+
+    End Sub
+    'When hitting the enter button it calculates, only when focus is on a trick textbox
+    Private Sub txtplayer1trick1_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer1trick1.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer1trick2_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer1trick2.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer1trick3_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer1trick3.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer1trick4_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer1trick4.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer1trick5_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer1trick5.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer1trick6_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer1trick6.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer1trick7_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer1trick7.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer1trick8_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer1trick8.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer1trick9_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer1trick9.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer1trick10_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer1trick10.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer1trick11_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer1trick11.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer1trick12_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer1trick12.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer1trick13_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer1trick13.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+
+    Private Sub txtplayer1trick14_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer1trick14.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+
+    Private Sub txtplayer2trick1_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer2trick1.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer2trick2_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer2trick2.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer2trick3_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer2trick3.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer2trick4_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer2trick4.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer2trick5_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer2trick5.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer2trick6_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer2trick6.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer2trick7_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer2trick7.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer2trick8_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer2trick8.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer2trick9_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer2trick9.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer2trick10_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer2trick10.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer2trick11_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer2trick11.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer2trick12_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer2trick12.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer2trick13_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer1trick13.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer2trick14_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer1trick14.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+
+    Private Sub txtplayer3trick1_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer3trick1.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer3trick2_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer3trick2.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer3trick3_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer3trick3.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer3trick4_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer3trick4.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer3trick5_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer3trick5.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer3trick6_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer3trick6.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer3trick7_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer3trick7.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer3trick8_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer3trick8.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer3trick9_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer3trick9.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer3trick10_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer3trick10.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer3trick11_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer3trick11.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer3trick12_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer3trick12.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer3trick13_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer3trick13.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+
+    Private Sub txtplayer3trick14_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer3trick14.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+
+    Private Sub txtplayer4trick1_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer4trick1.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer4trick2_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer4trick2.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer4trick3_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer4trick3.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer4trick4_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer4trick4.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer4trick5_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer4trick5.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer4trick6_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer4trick6.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer4trick7_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer4trick7.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer4trick8_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer4trick8.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer4trick9_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer4trick9.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer4trick10_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer4trick10.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer4trick11_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer4trick11.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer4trick12_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer4trick12.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer4trick13_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer4trick13.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+
+    Private Sub txtplayer4trick14_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer4trick14.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+
+    Private Sub txtplayer5trick1_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer5trick1.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer5trick2_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer5trick2.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer5trick3_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer5trick3.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer5trick4_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer5trick4.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer5trick5_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer5trick5.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer5trick6_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer5trick6.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer5trick7_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer5trick7.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer5trick8_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer5trick8.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer5trick9_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer5trick9.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer5trick10_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer5trick10.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer5trick11_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer5trick11.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer5trick12_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer5trick12.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer5trick13_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer5trick13.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+
+    Private Sub txtplayer5trick14_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer5trick14.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+
+    Private Sub txtplayer6trick1_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer6trick1.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer6trick2_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer6trick2.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer6trick3_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer6trick3.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer6trick4_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer6trick4.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer6trick5_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer6trick5.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer6trick6_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer6trick6.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer6trick7_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer6trick7.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer6trick8_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer6trick8.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer6trick9_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer6trick9.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer6trick10_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer6trick10.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer6trick11_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer6trick11.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer6trick12_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer6trick12.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer6trick13_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer6trick13.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+
+    Private Sub txtplayer6trick14_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer6trick14.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+
+    Private Sub txtplayer7trick1_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer7trick1.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer7trick2_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer7trick2.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer7trick3_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer7trick3.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer7trick4_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer7trick4.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer7trick5_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer7trick5.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer7trick6_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer7trick6.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer7trick7_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer7trick7.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer7trick8_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer7trick8.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer7trick9_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer7trick9.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer7trick10_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer7trick10.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer7trick11_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer7trick11.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer7trick12_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer7trick12.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+    Private Sub txtplayer7trick13_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer7trick13.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+
+    Private Sub txtplayer7trick14_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtplayer7trick14.KeyPress
+        If e.KeyChar = Chr(13) Then 'Chr(13) is the Enter Key
+            'Runs the Button1_Click Event
+            btncalculate_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+End Class
